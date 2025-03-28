@@ -9,6 +9,7 @@ namespace ld57
     // Add ur name in here so I know you installed VStudio 2022 correctly :)
     public enum Participants
     {
+        MtnBonez = 0,
     }
 
 
