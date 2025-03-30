@@ -10,6 +10,7 @@ namespace ld57
     public enum Participants
     {
         MtnBonez = 0, 
+        Lt_C = 42,
         Noodle = 69, 
         KDawgg = 420,
         Mattg = 3019,
