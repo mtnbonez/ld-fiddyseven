@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7401143daa60eed48863887e92afe7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockMesh: {fileID: 2914233691503573429}
+  RockMesh: {fileID: 2687143872575944218}
   meltValue: 0
