@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class LavaStripsHandler : MonoBehaviour
@@ -7,9 +8,19 @@ public class LavaStripsHandler : MonoBehaviour
 
     private void Update()
     {
-        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+        if (!hitRock)
+        {
+            fallSpeed = 2.0f;
+        }
+        else if (hitRock)
+        {
+            fallSpeed = 1f;
+
+            StartCoroutine(speedChangeDelay(1f));
+        }
+            transform.position += Vector3.down * fallSpeed * Time.deltaTime;
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         Debug.Log("collided");
         if (collision.collider.tag == "pickaxe" && hitRock == false)
@@ -18,10 +29,18 @@ public class LavaStripsHandler : MonoBehaviour
         }
         if (hitRock)
         {
-            fallSpeed = .2f;
+
             Destroy(collision.gameObject);
-            hitRock = false;
+            
         }
+
+
+           
+    }
+    IEnumerator speedChangeDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        hitRock = false;
     }
 
 }

@@ -10,6 +10,8 @@ public class RockVision : MonoBehaviour
 
     [SerializeField] float meltValue = 0;
 
+    public GameObject _boundingBox;
+
     Color TargetColor = new(1, 0, 0, 0);
 
     /*
