@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Mathematics;
 using UnityEngine.Experimental.GlobalIllumination;
+using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class Player : MonoBehaviour
     
     private void UpdateCameraPosition()
     { 
-        _camera.transform.position = new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z);
+        _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z), Time.deltaTime);
     }
 
     private Color GetRandomColorValue()
@@ -74,8 +75,6 @@ public class Player : MonoBehaviour
             b = UnityEngine.Random.Range(0.0f, 1.0f),
             a = UnityEngine.Random.Range(0.0f, 1.0f),
         };
-
-        //return UnityEngine.Random.Range(0.0f, 1.0f);
     }
 
 }
