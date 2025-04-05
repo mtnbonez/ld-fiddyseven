@@ -172,6 +172,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6298207853160030618, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 5b22e03cd80f7854a834b37ae733b10d, type: 2}
+    - target: {fileID: 6298207853160030618, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298207853160030618, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8044602395086097007, guid: f5ec26e8398946945831a0fb17a58471, type: 2}
+    - target: {fileID: 6298207853160030618, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7276746501406612376, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_Name
       value: Player
