@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8639710247012036222}
   - component: {fileID: 2860284225494331747}
   - component: {fileID: 4383139407922557602}
-  m_Layer: 0
+  - component: {fileID: -4105653416635855385}
+  m_Layer: 3
   m_Name: LavaStrip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,5 +107,17 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 6.0450525}
+  m_Center: {x: 0, y: 0, z: -0.009531021}
+--- !u!114 &-4105653416635855385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687828682549580520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca9414e71fee48479e3bc5bfe4b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
