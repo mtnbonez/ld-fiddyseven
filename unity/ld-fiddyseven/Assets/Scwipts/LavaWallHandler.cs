@@ -21,7 +21,7 @@ public class LavaWallHandler : MonoBehaviour
     {
         foreach (Transform walls in allWalls)
         {
-            if (walls != transform)
+            if (walls != transform && walls != null)
             {
                 walls.position += Vector3.down * fallSpeed * Time.deltaTime;
             }

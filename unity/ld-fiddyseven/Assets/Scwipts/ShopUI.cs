@@ -1,45 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections.Generic;
 
 public class ShopUI : MonoBehaviour
 {
-    public GameObject itemPrefab; // Assign in Inspector
-    public Transform contentPanel; // Assign Scroll View Content Panel
+    public Button closeButton;
 
-    private Dictionary<string, int> shopInventory = new Dictionary<string, int>
-    {
-        {"Pickaxe Damage", 100 },
-        {"Pickaxe Speed", 100 },
-        {"Probably something cool", 500 },
-        {"I'll never tell", 5000 },
-    };
+    private bool isShopOpen = false;
+
+    public void SetIsShopOpen(bool isOpen) { isShopOpen = isOpen; }
+    public bool IsShopOpen() { return isShopOpen; }
 
     private void Start()
     {
-        PopulateShop();
-    }
-
-    void PopulateShop()
-    {
-        // Sample shop items
-        foreach (var item in shopInventory)
+        if (closeButton != null)
         {
-            GameObject newItem = Instantiate( itemPrefab, contentPanel );
-
-            newItem.transform.Find( "ItemName" ).GetComponent<TMP_Text>().text = item.Key;
-            newItem.transform.Find( "ItemPrice" ).GetComponent<TMP_Text>().text = $"{item.Value}G";
-
-            Button buyButton = newItem.transform.Find( "BuyButton" ).GetComponent<Button>();
-            buyButton.onClick.AddListener( () => PurchaseItem( newItem ) );
+            closeButton.onClick.AddListener( CloseShop );
         }
-
-        LayoutRebuilder.ForceRebuildLayoutImmediate( contentPanel.GetComponent<RectTransform>() );
     }
 
-    void PurchaseItem( GameObject item )
+    private void CloseShop()
     {
-        Destroy( item ); // Removes the item from the list
+        SetIsShopOpen( false );
+        Destroy( gameObject );
     }
 }

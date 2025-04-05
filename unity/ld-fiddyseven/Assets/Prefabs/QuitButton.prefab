@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1823730058922111237}
   - component: {fileID: 8026629130872477636}
   - component: {fileID: 674884160462355110}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8952115575580773006}
   - component: {fileID: 4556764278543753289}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QUIT BUTTON ME ON_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1550058597131041409}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

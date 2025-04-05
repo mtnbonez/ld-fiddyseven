@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isJumping = false;
     
 
+    // player State for shop
+    private GameObject currentShop;
+    private bool isNearShop = false;
+
     public void Awake()
     {
         _rb = this.GetComponentInChildren<Rigidbody>();
@@ -32,6 +36,12 @@ public class Player : MonoBehaviour
         HandleKeyboard();
         UpdateCameraPosition();
     }
+
+    public void SetCurrentShop( GameObject shop ){ currentShop = shop; }
+    public GameObject GetCurrentShop() { return currentShop; }
+    public void SetIsNearShop( bool nearShop ){ isNearShop = nearShop; }
+    public bool IsNearShop(){ return isNearShop; }
+
     private void FixedUpdate()
     {
         if (isJumping)
@@ -46,6 +56,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    
     private void HandleKeyboard()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
