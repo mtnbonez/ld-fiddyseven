@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7726598261107615781}
   - component: {fileID: 657362892946373450}
   - component: {fileID: 2217600836754741432}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198113227019184596}
   - component: {fileID: 7296398921940636174}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Vision
   m_TagString: Vision
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 4259902916444812682}
   - component: {fileID: 264333455796726468}
   - component: {fileID: 7470087320205914096}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Collision
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -451,6 +451,7 @@ MonoBehaviour:
   cooldown: 0.01
   IsGrounded: 0
   PickAxeHit: {fileID: 6298207853160030618}
+  rockBreak: {fileID: 1506160400761069742, guid: 07fc0ee033e2c614e85e6e4b9814f29c, type: 3}
 --- !u!136 &7470087320205914096
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -798,6 +799,10 @@ PrefabInstance:
     - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Name
       value: ShopPromptText
+      objectReference: {fileID: 0}
+    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_IsActive
