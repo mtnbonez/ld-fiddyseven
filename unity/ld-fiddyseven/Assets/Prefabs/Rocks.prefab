@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2914233691503573429}
   - component: {fileID: 6235656129192664475}
   - component: {fileID: -7694023139520262810}
-  - component: {fileID: 1060503281774085967}
   m_Layer: 0
   m_Name: Rocks
   m_TagString: pickaxe
@@ -137,15 +136,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1060503281774085967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950295023961271012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749ae82161e5e4142b5d24c8e9129959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
