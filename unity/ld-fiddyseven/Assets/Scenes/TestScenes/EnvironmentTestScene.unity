@@ -23001,8 +23001,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2675713954923539768, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675713954923539768, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4806602092064868881, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536114945066596893, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7276746501406612376, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
@@ -93489,6 +93501,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5954155670431653897, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
   m_PrefabInstance: {fileID: 2145774554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7789747161859760467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.621
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685889790952191483, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238468175921919622, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_Name
+      value: VFX_RockBreak
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -93499,3 +93576,4 @@ SceneRoots:
   - {fileID: 1346841981}
   - {fileID: 379645117}
   - {fileID: 992794382}
+  - {fileID: 7789747161859760467}
