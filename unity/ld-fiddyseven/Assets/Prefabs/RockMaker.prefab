@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocks: {fileID: 950295023961271012, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
   xGridSize: 70
-  yGridSize: 80
+  yGridSize: 60
   spacing: 1

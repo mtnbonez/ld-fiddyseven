@@ -8,6 +8,7 @@ public class CharacterHandler : MonoBehaviour
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
     public bool IsGrounded = false;
+    public AudioSource PickAxeHit;
 
     public void Update()
     {
@@ -29,6 +30,7 @@ public class CharacterHandler : MonoBehaviour
                 if(hit.collider.tag == "pickaxe" && hitDistance > maxDistance)
                 {
                     Destroy(hit.collider.gameObject);
+                    PickAxeHit.Play();
                 }
             }
 
@@ -41,6 +43,11 @@ public class CharacterHandler : MonoBehaviour
         if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
         {
             IsGrounded = true;
+        }
+
+        if (collision.collider.tag == "Win")
+        {
+            // Win condition
         }
     }
 
