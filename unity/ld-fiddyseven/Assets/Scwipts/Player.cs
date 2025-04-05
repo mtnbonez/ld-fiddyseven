@@ -33,20 +33,8 @@ public class Player : MonoBehaviour
         HandleKeyboard();
         HandleMouse();
         UpdateCameraPosition();
-    }
-    private void FixedUpdate()
-    {
-        if (isJumping)
-        {
-            if (_rb.linearVelocity.y >= maxJump)
-            {
-                isJumping = false;
-            }
-            else
-            {
-                _rb.angularVelocity = new Vector3(0, _rb.angularVelocity.y + JumpMultiplier, 0);
-            }
-        }
+
+
     }
 
     private void HandleKeyboard()
@@ -68,8 +56,10 @@ public class Player : MonoBehaviour
         {
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
+
+                Debug.Log("Player Jumped");
                 isJumping = true;
-                _rb.AddForce(Vector3.up * JumpMultiplier);
+                _rb.AddForce(Vector3.up * 200 );
             }
 
             jumpKeyHeld = true;
@@ -78,6 +68,18 @@ public class Player : MonoBehaviour
         {
             jumpKeyHeld = false;
             isJumping = false;
+        }
+
+        if (isJumping)
+        {
+            if (_rb.linearVelocity.y >= maxJump)
+            {
+                isJumping = false;
+            }
+            else
+            {
+                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + JumpMultiplier, 0);
+            }
         }
 
         //if (Input.GetKeyDown("s") || Input.GetKey("s"))

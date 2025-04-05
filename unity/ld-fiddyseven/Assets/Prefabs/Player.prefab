@@ -474,9 +474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSensitivity: 5
   CameraCatchupFactor: 1.69
-  JumpMultiplier: 400
+  JumpMultiplier: 0.11
   AirborneMultiplier: 0.3
-  maxJump: 20
+  maxJump: 6.3
   lamp: {fileID: 8085357379675809751}
   jumpKeyHeld: 0
   isJumping: 0
