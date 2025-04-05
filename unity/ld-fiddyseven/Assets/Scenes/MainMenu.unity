@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233807193624287491, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: MovementSensitivity
+      value: 4.07
+      objectReference: {fileID: 0}
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -166,6 +170,18 @@ PrefabInstance:
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029487127923960526, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029487127923960526, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029487127923960526, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 7276746501406612376, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_Name
@@ -223,7 +239,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0

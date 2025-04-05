@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
     public float MovementSensitivity = 1;
     public Light lamp;
     private Rigidbody _rb;
+    private Camera _camera;
 
     public void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rb = this.GetComponentInChildren<Rigidbody>();
+        _camera = this.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class Player : MonoBehaviour
     {
         HandleKeyboard();
         HandleMouse();
+        UpdatePosition();
     }
 
     private void HandleKeyboard()
@@ -53,6 +56,11 @@ public class Player : MonoBehaviour
         {
             lamp.color = GetRandomColorValue();
         }
+    }
+
+    private void UpdatePosition()
+    {
+        _camera.transform.position = new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z);
     }
 
     private Color GetRandomColorValue()
