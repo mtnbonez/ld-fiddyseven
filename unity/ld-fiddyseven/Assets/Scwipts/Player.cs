@@ -6,11 +6,11 @@ public class Player : MonoBehaviour
 {
     public float MovementSensitivity = 1;
     public Light lamp;
-    private Transform _selfTransform;
+    private Rigidbody _rb;
 
     public void Awake()
     {
-        _selfTransform = transform;
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,25 +25,25 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("w") || Input.GetKey("w"))
         {
             //TODO: maybe linear interpolation?
-            _selfTransform.Translate(Vector3.forward * MovementSensitivity);
+            _rb.AddForce(Vector3.up * MovementSensitivity);
         }
 
         if (Input.GetKeyDown("s") || Input.GetKey("s"))
         {
             //TODO: maybe linear interpolation?
-            _selfTransform.Translate(Vector3.back * MovementSensitivity);
+            _rb.AddForce(Vector3.down * MovementSensitivity);
         }
 
         if (Input.GetKeyDown("a") || Input.GetKey("a"))
         {
             //TODO: maybe linear interpolation?
-            _selfTransform.Translate(Vector3.left * MovementSensitivity);
+            _rb.AddForce(Vector3.left * MovementSensitivity);
         }
 
         if (Input.GetKeyDown("d") || Input.GetKey("d"))
         {
             //TODO: maybe linear interpolation?
-            _selfTransform.Translate(Vector3.right * MovementSensitivity);
+            _rb.AddForce(Vector3.right * MovementSensitivity);
         }
     }
 
