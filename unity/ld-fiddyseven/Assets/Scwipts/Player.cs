@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     private BoxCollider _cameraBoxCollider;
     private CharacterHandler _characterHandler;
 
+    // player State for shop
+    private GameObject currentShop;
+    private bool isNearShop = false;
+
     public void Awake()
     {
         _rb = this.GetComponentInChildren<Rigidbody>();
@@ -30,6 +34,11 @@ public class Player : MonoBehaviour
         HandleMouse();
         UpdateCameraPosition();
     }
+
+    public void SetCurrentShop( GameObject shop ){ currentShop = shop; }
+    public GameObject GetCurrentShop() { return currentShop; }
+    public void SetIsNearShop( bool nearShop ){ isNearShop = nearShop; }
+    public bool IsNearShop(){ return isNearShop; }
 
     private void HandleKeyboard()
     {

@@ -417,6 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2572774711378633716}
   - component: {fileID: 233807193624287491}
+  - component: {fileID: 8927160124486552044}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -459,6 +460,20 @@ MonoBehaviour:
   JumpMultiplier: 107.1
   AirborneMultiplier: 0.3
   lamp: {fileID: 8085357379675809751}
+--- !u!114 &8927160124486552044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276746501406612376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c84ba20d1fe3643aa0d38c80d0f395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopUIPrefab: {fileID: 4960895869905204014, guid: 857525d673d12c249890bd573e8bde5b, type: 3}
+  uiCanvas: {fileID: 0}
 --- !u!1 &8963985016174580194
 GameObject:
   m_ObjectHideFlags: 0
