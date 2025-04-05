@@ -23,12 +23,20 @@ public class CharacterHandler : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, raycastDistance))
             {
-
                 float maxDistance = Vector3.Distance(transform.position, hit.point);
 
                 //Debug.Log("ROCKS HERE" + hit.collider.tag);
                 if(hit.collider.tag == "pickaxe" && hitDistance > maxDistance)
                 {
+                    // TODO: try to color the other rocks here?
+                    /*
+                    hit.collider.gameObject.TryGetComponent(out RockVision vision);
+                    if (vision != null)
+                    {
+
+                    }
+                    */
+
                     Destroy(hit.collider.gameObject);
                     PickAxeHit.Play();
                 }
