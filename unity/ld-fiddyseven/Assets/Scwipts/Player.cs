@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     public float JumpMultiplier = 15f;
     public float initialJumpForce = 15f;
     public float maxJump = 15f;
-    public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
@@ -31,10 +30,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         HandleKeyboard();
-        HandleMouse();
         UpdateCameraPosition();
-
-
     }
     private void FixedUpdate()
     {
@@ -120,14 +116,6 @@ public class Player : MonoBehaviour
 
         //    _rb.AddForce(Vector3.right * forceMultiplier);
         //}
-    }
-
-    private void HandleMouse()
-    {
-        if (Input.mouseScrollDelta.y != 0)
-        {
-            lamp.color = GetRandomColorValue();
-        }
     }
     
     private void UpdateCameraPosition()
