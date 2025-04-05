@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0.1
+  IsGrounded: 0
 --- !u!135 &6521404931667175805
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -455,8 +456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSensitivity: 5
   CameraCatchupFactor: 1.69
+  JumpMultiplier: 107.1
+  AirborneMultiplier: 0.3
   lamp: {fileID: 8085357379675809751}
-  isGrounded: 1
 --- !u!1 &8963985016174580194
 GameObject:
   m_ObjectHideFlags: 0

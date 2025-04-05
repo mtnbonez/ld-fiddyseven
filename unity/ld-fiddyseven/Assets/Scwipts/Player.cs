@@ -7,17 +7,20 @@ public class Player : MonoBehaviour
 {
     public float MovementSensitivity = 1f;
     public float CameraCatchupFactor = 1f;
+    public float JumpMultiplier = 15f;
+    public float AirborneMultiplier = 15f;
     public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
-   private bool isGrounded = true;
+    private CharacterHandler _characterHandler;
 
     public void Awake()
     {
         _rb = this.GetComponentInChildren<Rigidbody>();
         _camera = this.GetComponentInChildren<Camera>();
         _cameraBoxCollider = _camera.GetComponent<BoxCollider>();
+        _characterHandler = this.GetComponentInChildren<CharacterHandler>();
     }
 
     // Update is called once per frame
@@ -30,29 +33,43 @@ public class Player : MonoBehaviour
 
     private void HandleKeyboard()
     {
-        if (Input.GetKeyDown("w") && isGrounded)
+        // Jump can ONLY be peformed if grounded
+        if (Input.GetKeyDown("w") && _characterHandler.IsGrounded)
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.up * MovementSensitivity * 10);
-            isGrounded = false;
+            _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
         }
 
         if (Input.GetKeyDown("s") || Input.GetKey("s"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.down * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.down * forceMultiplier);
         }
 
         if (Input.GetKeyDown("a") || Input.GetKey("a"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.left * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.left * forceMultiplier);
         }
 
         if (Input.GetKeyDown("d") || Input.GetKey("d"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.right * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.right * forceMultiplier);
         }
     }
 
@@ -79,13 +96,4 @@ public class Player : MonoBehaviour
             a = UnityEngine.Random.Range(0.0f, 1.0f),
         };
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        isGrounded = true;
-        //lol
-    }
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    isGrounded = false;
-    //}
 }
