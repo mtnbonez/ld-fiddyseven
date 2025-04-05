@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float MovementSensitivity = 5f;
     public float CameraCatchupFactor = 1f;
     public float JumpMultiplier = 15f;
-    public float AirborneMultiplier = 15f;
+    public float initialJumpForce = 15f;
     public float maxJump = 15f;
     public Light lamp;
     private Rigidbody _rb;
@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
         HandleKeyboard();
         HandleMouse();
         UpdateCameraPosition();
+
+
     }
     private void FixedUpdate()
     {
@@ -44,11 +46,10 @@ public class Player : MonoBehaviour
             }
             else
             {
-                _rb.angularVelocity = new Vector3(0, _rb.angularVelocity.y + JumpMultiplier, 0);
+                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + JumpMultiplier, 0);
             }
         }
     }
-
     private void HandleKeyboard()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -68,8 +69,10 @@ public class Player : MonoBehaviour
         {
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
+
+                Debug.Log("Player Jumped");
                 isJumping = true;
-                _rb.AddForce(Vector3.up * JumpMultiplier);
+                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + initialJumpForce, 0);
             }
 
             jumpKeyHeld = true;
@@ -79,6 +82,8 @@ public class Player : MonoBehaviour
             jumpKeyHeld = false;
             isJumping = false;
         }
+
+
 
         //if (Input.GetKeyDown("s") || Input.GetKey("s"))
         //{

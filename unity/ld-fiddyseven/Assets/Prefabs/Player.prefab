@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be86e5ea639fa4e458a6171fb02675b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Columns: 4
+  Columns: 8
   Rows: 4
   FlipSpeed: 1
   IdleFrames: 3
-  WalkFrames: 0
-  SwingFrames: 0
-  JumpFrames: 0
+  WalkFrames: 1
+  SwingFrames: 1
+  JumpFrames: 8
   flipSprite: 0
 --- !u!1 &4308250041387285627
 GameObject:
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 7843301854861939210}
   - component: {fileID: 4259902916444812682}
   - component: {fileID: 264333455796726468}
-  - component: {fileID: 5249451693389506766}
+  - component: {fileID: 7470087320205914096}
   m_Layer: 0
   m_Name: Collision
   m_TagString: Player
@@ -270,8 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0.01
   IsGrounded: 0
---- !u!65 &5249451693389506766
-BoxCollider:
+--- !u!136 &7470087320205914096
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -288,9 +288,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42758274, y: 0.7715893, z: 1}
-  m_Center: {x: 0.0028643608, y: -0.10586834, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.23319578
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.0127539635, y: 0, z: 0}
 --- !u!1 &6988058655951165178
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,9 +479,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSensitivity: 5
   CameraCatchupFactor: 1.69
-  JumpMultiplier: 400
-  AirborneMultiplier: 0.3
-  maxJump: 20
+  JumpMultiplier: 0.6
+  initialJumpForce: 1.5
+  maxJump: 4
   lamp: {fileID: 8085357379675809751}
   jumpKeyHeld: 0
   isJumping: 0
