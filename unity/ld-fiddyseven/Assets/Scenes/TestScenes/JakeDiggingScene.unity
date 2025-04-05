@@ -248,21 +248,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 233807193624287491, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: MovementSensitivity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 264333455796726468, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: cooldown
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,14 +288,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2995761777425641729, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3739484973688609391, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7276746501406612376, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -324,6 +308,10 @@ PrefabInstance:
     - target: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
       propertyPath: m_Name
       value: RockMaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
       propertyPath: m_LocalPosition.x
