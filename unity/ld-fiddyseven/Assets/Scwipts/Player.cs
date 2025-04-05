@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
     private CharacterHandler _characterHandler;
-    private bool jumpKeyHeld = false;
+    [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
     
 
@@ -33,6 +33,9 @@ public class Player : MonoBehaviour
         HandleKeyboard();
         HandleMouse();
         UpdateCameraPosition();
+    }
+    private void FixedUpdate()
+    {
         if (isJumping)
         {
             if (_rb.linearVelocity.y >= maxJump)
@@ -41,10 +44,9 @@ public class Player : MonoBehaviour
             }
             else
             {
-                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + JumpMultiplier, 0);
+                _rb.angularVelocity = new Vector3(0, _rb.angularVelocity.y + JumpMultiplier, 0);
             }
         }
-
     }
 
     private void HandleKeyboard()
@@ -67,8 +69,9 @@ public class Player : MonoBehaviour
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
                 isJumping = true;
-                _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
+                _rb.AddForce(Vector3.up * JumpMultiplier);
             }
+
             jumpKeyHeld = true;
         }
         else if(Input.GetKeyUp("w"))

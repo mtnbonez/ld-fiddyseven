@@ -103,6 +103,9 @@ MonoBehaviour:
   Rows: 4
   FlipSpeed: 1
   IdleFrames: 3
+  WalkFrames: 0
+  SwingFrames: 0
+  JumpFrames: 0
   flipSprite: 0
 --- !u!1 &4308250041387285627
 GameObject:
@@ -265,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ae82161e5e4142b5d24c8e9129959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
+  cooldown: 0.01
   IsGrounded: 0
 --- !u!65 &5249451693389506766
 BoxCollider:
@@ -474,10 +477,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSensitivity: 5
   CameraCatchupFactor: 1.69
-  JumpMultiplier: 2
+  JumpMultiplier: 400
   AirborneMultiplier: 0.3
-  maxJump: 6
+  maxJump: 20
   lamp: {fileID: 8085357379675809751}
+  jumpKeyHeld: 0
   isJumping: 0
 --- !u!1 &8963985016174580194
 GameObject:
