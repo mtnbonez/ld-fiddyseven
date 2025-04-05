@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
+    private BoxCollider _cameraBoxCollider;
 
     public void Awake()
     {
         _rb = this.GetComponentInChildren<Rigidbody>();
         _camera = this.GetComponentInChildren<Camera>();
+        _cameraBoxCollider = _camera.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class Player : MonoBehaviour
     {
         HandleKeyboard();
         HandleMouse();
-        UpdatePosition();
+        UpdateCameraPosition();
     }
 
     private void HandleKeyboard()
@@ -57,9 +59,9 @@ public class Player : MonoBehaviour
             lamp.color = GetRandomColorValue();
         }
     }
-
-    private void UpdatePosition()
-    {
+    
+    private void UpdateCameraPosition()
+    { 
         _camera.transform.position = new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z);
     }
 
