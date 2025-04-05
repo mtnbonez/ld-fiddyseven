@@ -19,7 +19,7 @@ public class RockGrid : MonoBehaviour
         {
             for (int y = 0; y < yGridSize; y++)
             {
-                Vector3 position = new Vector3(x * spacing, -y * spacing, 0);
+                Vector3 position = new Vector3(x * spacing + transform.position.x, -y * spacing + transform.position.y, 0);
                 Instantiate(rocks, position, Quaternion.identity, transform);
             }
         }

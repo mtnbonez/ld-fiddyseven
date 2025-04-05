@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ae82161e5e4142b5d24c8e9129959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.25
+  cooldown: 0.01
 --- !u!64 &2995761777425641729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -336,7 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b3a8c2754bb674293071dd3b147c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSensitivity: 70
+  MovementSensitivity: 5
+  CameraCatchupFactor: 1.69
   lamp: {fileID: 8085357379675809751}
 --- !u!1 &8963985016174580194
 GameObject:

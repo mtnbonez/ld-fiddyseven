@@ -5,7 +5,8 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-    public float MovementSensitivity = 1;
+    public float MovementSensitivity = 1f;
+    public float CameraCatchupFactor = 1f;
     public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour
     
     private void UpdateCameraPosition()
     { 
-        _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z), Time.deltaTime);
+        _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z), Time.deltaTime * CameraCatchupFactor);
     }
 
     private Color GetRandomColorValue()

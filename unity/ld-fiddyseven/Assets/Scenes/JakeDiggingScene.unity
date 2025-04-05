@@ -240,54 +240,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &1335950435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1335950437}
-  - component: {fileID: 1335950436}
-  m_Layer: 0
-  m_Name: RockMaker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1335950436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335950435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4ecd4d7bd3a964a9b20056f798d895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocks: {fileID: 950295023961271012, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
-  xGridSize: 32
-  yGridSize: 32
-  spacing: 1
---- !u!4 &1335950437
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335950435}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2006021035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,10 +313,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+--- !u!1001 &3875791754968743834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_Name
+      value: RockMaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1020398501}
-  - {fileID: 1335950437}
+  - {fileID: 3875791754968743834}
   - {fileID: 2006021035}
