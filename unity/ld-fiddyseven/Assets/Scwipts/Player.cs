@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
-   [SerializeField] private bool isGrounded = true;
+   private bool isGrounded = true;
 
     public void Awake()
     {
