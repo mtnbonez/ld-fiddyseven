@@ -471,6 +471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopPromptText
       objectReference: {fileID: 0}
+    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
