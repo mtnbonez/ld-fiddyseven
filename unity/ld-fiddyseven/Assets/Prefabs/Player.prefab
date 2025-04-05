@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 7843301854861939210}
   - component: {fileID: 4259902916444812682}
   - component: {fileID: 264333455796726468}
-  - component: {fileID: 6521404931667175805}
+  - component: {fileID: 5249451693389506766}
   m_Layer: 0
   m_Name: Collision
   m_TagString: Player
@@ -267,8 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0.1
   IsGrounded: 0
---- !u!135 &6521404931667175805
-SphereCollider:
+--- !u!65 &5249451693389506766
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -286,8 +286,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.45
-  m_Center: {x: 0, y: -0.05, z: 0}
+  m_Size: {x: 0.42758274, y: 0.7715893, z: 1}
+  m_Center: {x: 0.0028643608, y: -0.10586834, z: 0}
 --- !u!1 &6988058655951165178
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,9 +474,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSensitivity: 5
   CameraCatchupFactor: 1.69
-  JumpMultiplier: 107.1
+  JumpMultiplier: 2
   AirborneMultiplier: 0.3
+  maxJump: 6
   lamp: {fileID: 8085357379675809751}
+  isJumping: 0
 --- !u!1 &8963985016174580194
 GameObject:
   m_ObjectHideFlags: 0

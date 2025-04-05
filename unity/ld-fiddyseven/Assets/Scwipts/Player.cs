@@ -5,15 +5,19 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-    public float MovementSensitivity = 1f;
+    public float MovementSensitivity = 5f;
     public float CameraCatchupFactor = 1f;
     public float JumpMultiplier = 15f;
     public float AirborneMultiplier = 15f;
+    public float maxJump = 15f;
     public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
     private CharacterHandler _characterHandler;
+    private bool jumpKeyHeld = false;
+    [SerializeField] private bool isJumping = false;
+    
 
     public void Awake()
     {
@@ -29,50 +33,85 @@ public class Player : MonoBehaviour
         HandleKeyboard();
         HandleMouse();
         UpdateCameraPosition();
+        if (isJumping)
+        {
+            if (_rb.linearVelocity.y >= maxJump)
+            {
+                isJumping = false;
+            }
+            else
+            {
+                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + JumpMultiplier, 0);
+            }
+        }
+
     }
 
     private void HandleKeyboard()
     {
+        float moveInput = Input.GetAxisRaw("Horizontal");
+
+        Vector3 moveDirection = new Vector3(moveInput, 0, 0);
+
+        transform.position += moveDirection * MovementSensitivity * Time.deltaTime;
+
+
+
+
+
         // Jump can ONLY be peformed if grounded
         // DO: we should make the jump force "variable", so you can have long & short jumps
         // Reference Catnip Catastrophe's `PlayerController.Update()` for more details
-        if (Input.GetKeyDown("w") && _characterHandler.IsGrounded)
+        if (Input.GetKeyDown("w"))
         {
-            _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
-        }
-
-        if (Input.GetKeyDown("s") || Input.GetKey("s"))
-        {
-            float forceMultiplier = MovementSensitivity;
-            if (!_characterHandler.IsGrounded)
+            if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
-                forceMultiplier *= AirborneMultiplier;
+                isJumping = true;
+                _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
             }
-
-            _rb.AddForce(Vector3.down * forceMultiplier);
+            jumpKeyHeld = true;
         }
-
-        if (Input.GetKeyDown("a") || Input.GetKey("a"))
+        else if(Input.GetKeyUp("w"))
         {
-            float forceMultiplier = MovementSensitivity;
-            if (!_characterHandler.IsGrounded)
-            {
-                forceMultiplier *= AirborneMultiplier;
-            }
-
-            _rb.AddForce(Vector3.left * forceMultiplier);
+            jumpKeyHeld = false;
+            isJumping = false;
         }
 
-        if (Input.GetKeyDown("d") || Input.GetKey("d"))
-        {
-            float forceMultiplier = MovementSensitivity;
-            if (!_characterHandler.IsGrounded)
-            {
-                forceMultiplier *= AirborneMultiplier;
-            }
+        //if (Input.GetKeyDown("s") || Input.GetKey("s"))
+        //{
+        //    float forceMultiplier = MovementSensitivity;
+        //    if (!_characterHandler.IsGrounded)
+        //    {
+        //        forceMultiplier *= AirborneMultiplier;
+        //    }
 
-            _rb.AddForce(Vector3.right * forceMultiplier);
-        }
+        //    _rb.AddForce(Vector3.down * forceMultiplier);
+        //}
+
+        //if (Input.GetKeyDown("a") || Input.GetKey("a"))
+        //{
+
+
+
+
+        //    if (!_characterHandler.IsGrounded)
+        //    {
+        //       // forceMultiplier *= AirborneMultiplier;
+        //    }
+
+        //  //  _rb.AddForce(Vector3.left * forceMultiplier);
+        //}
+
+        //if (Input.GetKeyDown("d") || Input.GetKey("d"))
+        //{
+        //    float forceMultiplier = MovementSensitivity;
+        //    if (!_characterHandler.IsGrounded)
+        //    {
+        //        forceMultiplier *= AirborneMultiplier;
+        //    }
+
+        //    _rb.AddForce(Vector3.right * forceMultiplier);
+        //}
     }
 
     private void HandleMouse()

@@ -181,11 +181,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
---- !u!1 &1099979485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
-  m_PrefabInstance: {fileID: 1422876096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1422876096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,11 +237,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8763287024289929038, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: xGridSize
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+--- !u!1 &2072316976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+  m_PrefabInstance: {fileID: 1422876096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1134472731012375478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,13 +299,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5245580485895646466, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5245580485895646466, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
+    - target: {fileID: 1823730058922111237, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6423156432264694316, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
       propertyPath: m_Name
@@ -331,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 4631487581988540273, guid: 64fbd61fdffdef643a110ff377edf0f2, type: 3}
       propertyPath: RockMaker
       value: 
-      objectReference: {fileID: 1099979485}
+      objectReference: {fileID: 2072316976}
     - target: {fileID: 8372615690159354852, guid: 64fbd61fdffdef643a110ff377edf0f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25
