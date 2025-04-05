@@ -7,6 +7,7 @@ using UnityEngine;
     private float timeStamp;
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
+    private bool isGrounded = false;
 
     public void Update()
     {
@@ -39,7 +40,11 @@ using UnityEngine;
             timeStamp = Time.time + cooldown;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        //isGrounded = true;
+    }
 
-    
+
 
 }

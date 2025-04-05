@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
+   [SerializeField] private bool isGrounded = true;
 
     public void Awake()
     {
@@ -28,10 +29,11 @@ public class Player : MonoBehaviour
 
     private void HandleKeyboard()
     {
-        if (Input.GetKeyDown("w") || Input.GetKey("w"))
+        if (Input.GetKeyDown("w") && isGrounded)
         {
             //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.up * MovementSensitivity);
+            _rb.AddForce(Vector3.up * MovementSensitivity * 10);
+            isGrounded = false;
         }
 
         if (Input.GetKeyDown("s") || Input.GetKey("s"))
@@ -76,5 +78,13 @@ public class Player : MonoBehaviour
             a = UnityEngine.Random.Range(0.0f, 1.0f),
         };
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        isGrounded = true;
+        //lol
+    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    isGrounded = false;
+    //}
 }
