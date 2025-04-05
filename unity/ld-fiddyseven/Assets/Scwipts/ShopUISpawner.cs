@@ -21,7 +21,7 @@ public class ShopUISpawner : MonoBehaviour
                 uiCanvas != null)
             {
                 if (uiCanvas.GetComponentInChildren<ShopUI>() != null &&
-                    uiCanvas.GetComponentInChildren<ShopUI>().IsShopOpen()) 
+                    uiCanvas.GetComponentInChildren<ShopUI>().IsShopOpen())
                 {
                     return;
                 }
