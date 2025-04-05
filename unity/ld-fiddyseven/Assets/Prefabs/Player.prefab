@@ -103,6 +103,9 @@ MonoBehaviour:
   Rows: 4
   FlipSpeed: 1
   IdleFrames: 3
+  WalkFrames: 0
+  SwingFrames: 0
+  JumpFrames: 0
   flipSprite: 0
 --- !u!1 &4308250041387285627
 GameObject:

@@ -8,7 +8,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            _gm.SwitchScene_MainMenu();
+            _gm.SwitchScene_Shop();
         }
     }
 }
