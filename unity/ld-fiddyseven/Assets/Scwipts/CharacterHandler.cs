@@ -42,6 +42,11 @@ public class CharacterHandler : MonoBehaviour
         {
             IsGrounded = true;
         }
+
+        if (collision.collider.tag == "Win")
+        {
+            // Win condition
+        }
     }
 
     private void OnCollisionStay(Collision collision)
