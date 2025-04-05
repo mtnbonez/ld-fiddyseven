@@ -11,18 +11,14 @@ public class CharacterHandler : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeStamp)
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > timeStamp)
         {
             Vector3 mousePosition = Input.mousePosition;
 
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
             mouseWorldPosition.z = 0;
 
-            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-
- 
-            
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);            
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, raycastDistance))
             {
@@ -42,7 +38,15 @@ public class CharacterHandler : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
+        {
+            IsGrounded = true;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
         {
             IsGrounded = true;
         }
@@ -50,7 +54,7 @@ public class CharacterHandler : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
         {
             IsGrounded = false;
         }

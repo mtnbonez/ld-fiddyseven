@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     private void HandleKeyboard()
     {
         // Jump can ONLY be peformed if grounded
+        // DO: we should make the jump force "variable", so you can have long & short jumps
+        // Reference Catnip Catastrophe's `PlayerController.Update()` for more details
         if (Input.GetKeyDown("w") && _characterHandler.IsGrounded)
         {
             _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
