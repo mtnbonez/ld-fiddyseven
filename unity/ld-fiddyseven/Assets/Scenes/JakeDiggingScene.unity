@@ -288,7 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocks: {fileID: 950295023961271012, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
-  gridSize: 64
+  xGridSize: 32
+  yGridSize: 32
   spacing: 1
 --- !u!4 &1335950437
 Transform:
