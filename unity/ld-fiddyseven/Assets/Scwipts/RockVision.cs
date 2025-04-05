@@ -12,24 +12,29 @@ public class RockVision : MonoBehaviour
 
     Color TargetColor = new(1, 0, 0, 0);
 
-    void Start()
+    /*
+    private void OnTriggerStay(Collider other)
     {
+        //PaintVision(other);
+    }
+    */
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        PaintVision(other);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void PaintVision(Collider other)
     {
-        if(collision.collider.CompareTag("Vision"))
+        if (other.CompareTag("Vision"))
         {
-            print("Collided with vision");
+            //Debug.Log("Collided with vision");
             Vector3[] vertices = RockMesh.mesh.vertices;
 
             // create new colors array where the colors will be created.
             Color[] colors = new Color[vertices.Length];
 
-            TargetColor.r = 0.0f;
-
+            TargetColor.r = 0.5f;
 
             for (int i = 0; i < vertices.Length; i++)
                 colors[i] = TargetColor;
@@ -39,12 +44,12 @@ public class RockVision : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if(collision.collider.CompareTag("Vision") && TargetColor.r > 1f)
+        if(other.CompareTag("Vision") && TargetColor.r < 1f)
         {
-            print("Starting to fade to " + TargetColor.r);
-            StartCoroutine(UpdateRockColor(1, RockMesh));
+            //Debug.Log("Starting to fade to " + TargetColor.r);
+            //StartCoroutine(UpdateRockColor(1, RockMesh));
         }
 
     }
@@ -56,16 +61,18 @@ public class RockVision : MonoBehaviour
 
         // create new colors array where the colors will be created.
         Color[] colors = new Color[vertices.Length];
+        
+        while (TargetColor.r < 1f)
+        {
+            for (int i = 0; i < vertices.Length; i++)
+                colors[i] = TargetColor;
 
+            // assign the array of colors to the Mesh.
+            RockMesh.mesh.colors = colors;
 
-        for (int i = 0; i < vertices.Length; i++)
-            colors[i] = TargetColor;
+            TargetColor.r += 0.1f;
 
-        // assign the array of colors to the Mesh.
-        RockMesh.mesh.colors = colors;
-
-        TargetColor.r = TargetColor.r + 0.1f;
-
-        yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSecondsRealtime(waitTime);
+        }
     }
 }
