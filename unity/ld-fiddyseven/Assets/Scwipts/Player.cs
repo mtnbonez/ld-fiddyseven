@@ -5,18 +5,22 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-    public float MovementSensitivity = 1;
+    public float MovementSensitivity = 1f;
+    public float CameraCatchupFactor = 1f;
+    public float JumpMultiplier = 15f;
+    public float AirborneMultiplier = 15f;
     public Light lamp;
     private Rigidbody _rb;
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
-   [SerializeField] private bool isGrounded = true;
+    private CharacterHandler _characterHandler;
 
     public void Awake()
     {
         _rb = this.GetComponentInChildren<Rigidbody>();
         _camera = this.GetComponentInChildren<Camera>();
         _cameraBoxCollider = _camera.GetComponent<BoxCollider>();
+        _characterHandler = this.GetComponentInChildren<CharacterHandler>();
     }
 
     // Update is called once per frame
@@ -29,29 +33,45 @@ public class Player : MonoBehaviour
 
     private void HandleKeyboard()
     {
-        if (Input.GetKeyDown("w") && isGrounded)
+        // Jump can ONLY be peformed if grounded
+        // DO: we should make the jump force "variable", so you can have long & short jumps
+        // Reference Catnip Catastrophe's `PlayerController.Update()` for more details
+        if (Input.GetKeyDown("w") && _characterHandler.IsGrounded)
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.up * MovementSensitivity * 10);
-            isGrounded = false;
+            _rb.AddForce(Vector3.up * MovementSensitivity * JumpMultiplier);
         }
 
         if (Input.GetKeyDown("s") || Input.GetKey("s"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.down * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.down * forceMultiplier);
         }
 
         if (Input.GetKeyDown("a") || Input.GetKey("a"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.left * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.left * forceMultiplier);
         }
 
         if (Input.GetKeyDown("d") || Input.GetKey("d"))
         {
-            //TODO: maybe linear interpolation?
-            _rb.AddForce(Vector3.right * MovementSensitivity);
+            float forceMultiplier = MovementSensitivity;
+            if (!_characterHandler.IsGrounded)
+            {
+                forceMultiplier *= AirborneMultiplier;
+            }
+
+            _rb.AddForce(Vector3.right * forceMultiplier);
         }
     }
 
@@ -65,7 +85,7 @@ public class Player : MonoBehaviour
     
     private void UpdateCameraPosition()
     { 
-        _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z), Time.deltaTime);
+        _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_rb.transform.position.x, _rb.transform.position.y, _camera.transform.position.z), Time.deltaTime * CameraCatchupFactor);
     }
 
     private Color GetRandomColorValue()
@@ -78,13 +98,4 @@ public class Player : MonoBehaviour
             a = UnityEngine.Random.Range(0.0f, 1.0f),
         };
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        isGrounded = true;
-        //lol
-    }
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    isGrounded = false;
-    //}
 }

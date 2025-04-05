@@ -1,28 +1,24 @@
 using System;
 using UnityEngine;
 
-    public class collisionHandler : MonoBehaviour
+public class CharacterHandler : MonoBehaviour
 {
     [SerializeField] private float cooldown = 1.25f;
     private float timeStamp;
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
-    private bool isGrounded = false;
+    public bool IsGrounded = false;
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeStamp)
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > timeStamp)
         {
             Vector3 mousePosition = Input.mousePosition;
 
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
             mouseWorldPosition.z = 0;
 
-            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-
- 
-            
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);            
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, raycastDistance))
             {
@@ -42,9 +38,26 @@ using UnityEngine;
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //isGrounded = true;
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
+        {
+            IsGrounded = true;
+        }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
+        {
+            IsGrounded = true;
+        }
+    }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")
+        {
+            IsGrounded = false;
+        }
+    }
 
 }
