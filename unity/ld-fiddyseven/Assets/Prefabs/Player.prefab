@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ae82161e5e4142b5d24c8e9129959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
+  cooldown: 0.01
   IsGrounded: 0
 --- !u!65 &5249451693389506766
 BoxCollider:
