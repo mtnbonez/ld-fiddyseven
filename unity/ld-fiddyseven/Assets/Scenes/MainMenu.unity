@@ -134,11 +134,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 233807193624287491, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: maxJump
-      value: 6.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 233807193624287491, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: JumpMultiplier
-      value: 0.11
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 233807193624287491, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: initialJumpForce
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2572774711378633716, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_LocalPosition.x
