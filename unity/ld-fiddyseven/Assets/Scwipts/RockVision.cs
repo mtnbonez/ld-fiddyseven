@@ -1,35 +1,78 @@
 using UnityEngine;
 using System.Collections;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
+using static UnityEngine.Rendering.DebugUI;
 
 public class RockVision : MonoBehaviour
 {
 
-    [SerializeField] MeshRenderer RockMesh;
-
-    private IEnumerator coroutine;
+    [SerializeField] MeshFilter RockMesh;
 
     [SerializeField] float meltValue = 0;
 
-    void Start()
+    Color TargetColor = new(1, 0, 0, 0);
+
+    /*
+    private void OnTriggerStay(Collider other)
     {
-        /*
-        // - After 0 seconds, prints "Starting 0.0 seconds"
-        // - After 0 seconds, prints "Coroutine started"
-        // - After 2 seconds, prints "Coroutine ended: 2.0 seconds"
-        print("Starting " + Time.time + " seconds");
+        //PaintVision(other);
+    }
+    */
 
-        // Start function WaitAndPrint as a coroutine.
-
-        coroutine = WaitAndPrint(2.0f);
-        StartCoroutine(coroutine);
-
-        print("Coroutine started");
-        */
+    private void OnTriggerEnter(Collider other)
+    {
+        PaintVision(other);
     }
 
-    private IEnumerator WaitAndPrint(float waitTime)
+    private void PaintVision(Collider other)
     {
-        yield return new WaitForSeconds(waitTime);
-        print("Coroutine ended: " + Time.time + " seconds");
+        if (other.CompareTag("Vision"))
+        {
+            //Debug.Log("Collided with vision");
+            Vector3[] vertices = RockMesh.mesh.vertices;
+
+            // create new colors array where the colors will be created.
+            Color[] colors = new Color[vertices.Length];
+
+            TargetColor.r = 0.5f;
+
+            for (int i = 0; i < vertices.Length; i++)
+                colors[i] = TargetColor;
+
+            // assign the array of colors to the Mesh.
+            RockMesh.mesh.colors = colors;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Vision") && TargetColor.r < 1f)
+        {
+            //Debug.Log("Starting to fade to " + TargetColor.r);
+            //StartCoroutine(UpdateRockColor(1, RockMesh));
+        }
+
+    }
+
+    private IEnumerator UpdateRockColor(float waitTime, MeshFilter RockMesh)
+    {
+
+        Vector3[] vertices = RockMesh.mesh.vertices;
+
+        // create new colors array where the colors will be created.
+        Color[] colors = new Color[vertices.Length];
+        
+        while (TargetColor.r < 1f)
+        {
+            for (int i = 0; i < vertices.Length; i++)
+                colors[i] = TargetColor;
+
+            // assign the array of colors to the Mesh.
+            RockMesh.mesh.colors = colors;
+
+            TargetColor.r += 0.1f;
+
+            yield return new WaitForSecondsRealtime(waitTime);
+        }
     }
 }
