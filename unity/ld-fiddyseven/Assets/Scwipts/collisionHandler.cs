@@ -5,34 +5,37 @@ using UnityEngine;
 {
     [SerializeField] private float cooldown = 1.25f;
     private float timeStamp;
-    private float raycastDistance = 7f;
+    private float raycastDistance = 26f;
+    private float hitDistance = 3f;
 
     public void Update()
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timeStamp)
         {
-            
-            //Debug.Log("mouse clicked");
             Vector3 mousePosition = Input.mousePosition;
 
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            //mouseWorldPos.z = 0;
+            mouseWorldPosition.z = 0;
 
-            Ray ray = new Ray(transform.position, mouseWorldPos);
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
 
+ 
             
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, raycastDistance))
             {
+
+                float maxDistance = Vector3.Distance(transform.position, hit.point);
+
                 //Debug.Log("ROCKS HERE" + hit.collider.tag);
-                if(hit.collider.tag == "pickaxe")
+                if(hit.collider.tag == "pickaxe" && hitDistance > maxDistance)
                 {
                     Destroy(hit.collider.gameObject);
                 }
             }
 
-            Debug.DrawRay(ray.origin, ray.direction *raycastDistance, Color.yellow,2f);
+            Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
             timeStamp = Time.time + cooldown;
         }
     }
