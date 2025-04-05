@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockMaker
       objectReference: {fileID: 0}
+    - target: {fileID: 2209440446630525784, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3772485852315600539, guid: 6bc30a61ac8ef22479e85acb9fd6d630, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
