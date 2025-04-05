@@ -5,7 +5,7 @@ public class RockGrid : MonoBehaviour
 
     [SerializeField] GameObject rocks;
     [SerializeField] int xGridSize = 64;
-    [SerializeField] int yGridSize = 1;
+    [SerializeField] int yGridSize = 64;
     [SerializeField] float spacing = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
