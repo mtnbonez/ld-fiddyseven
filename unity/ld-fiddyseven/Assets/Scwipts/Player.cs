@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
 
-                Debug.Log("Player Jumped");
+                //Debug.Log("Player Jumped");
                 isJumping = true;
                 _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + initialJumpForce, 0);
             }
