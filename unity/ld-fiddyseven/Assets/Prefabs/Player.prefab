@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be86e5ea639fa4e458a6171fb02675b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Columns: 4
+  Columns: 8
   Rows: 4
   FlipSpeed: 1
   IdleFrames: 3
-  WalkFrames: 0
-  SwingFrames: 0
-  JumpFrames: 0
+  WalkFrames: 1
+  SwingFrames: 1
+  JumpFrames: 8
   flipSprite: 0
 --- !u!1 &4308250041387285627
 GameObject:
