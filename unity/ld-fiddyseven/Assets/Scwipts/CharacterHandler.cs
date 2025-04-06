@@ -10,6 +10,7 @@ public class CharacterHandler : MonoBehaviour
     public bool IsGrounded = false;
     public AudioSource PickAxeHit;
     public GameObject rockBreak;
+    public float rockBreakdur = .001f;
     public void Update()
     {
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > timeStamp)
@@ -39,6 +40,8 @@ public class CharacterHandler : MonoBehaviour
                     GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
                     Destroy(hit.collider.gameObject);
                     PickAxeHit.Play();
+
+                    Destroy(rockBreakVFX, rockBreakdur);
                 }
             }
 
