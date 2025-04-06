@@ -1,14 +1,22 @@
 using UnityEditor.Build;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class ShopTrigger : MonoBehaviour
 {
-    public GameObject shopPrompt;
+    private GameObject shopPrompt;
 
     private Player player;
 
     private void Start()
     {
+        player = GameObject.FindWithTag( "Player" ).GetComponent<Player>();
+
+        if ( player == null)
+        {
+            shopPrompt = player.GetComponentInChildren<Transform>().Find( "ShopPromptText" )?.gameObject;
+        }
+
         shopPrompt.SetActive( false );
     }
 
