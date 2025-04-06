@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8542331600598340446, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: firstboot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8927160124486552044, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: uiCanvas
       value: 
@@ -828,3 +832,4 @@ SceneRoots:
   - {fileID: 177129128}
   - {fileID: 62277012}
   - {fileID: 756095242}
+  - {fileID: 1220694661}
