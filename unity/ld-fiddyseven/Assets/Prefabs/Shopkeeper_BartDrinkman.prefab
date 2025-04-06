@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_Name
-      value: Shop
+      value: Shopkeeper_BartDrinkman
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_TagString
+      value: Shopkeeper
       objectReference: {fileID: 0}
     - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.x
