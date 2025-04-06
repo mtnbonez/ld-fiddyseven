@@ -9,7 +9,7 @@ public class ShopTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision )
     {
-        if (!collision.CompareTag( "playerCollider" ))
+        if (!collision.CompareTag( "playerCollision" ))
         {
             return;
         }
@@ -31,7 +31,7 @@ public class ShopTrigger : MonoBehaviour
 
     private void OnTriggerExit( Collider collision )
     {
-        if (!collision.CompareTag( "playerCollider" ))
+        if (!collision.CompareTag( "playerCollision" ))
         {
             return;
         }
