@@ -9,8 +9,12 @@ public class CharacterHandler : MonoBehaviour
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
     public bool IsGrounded = false;
+
     public AudioSource PickAxeHit;
     public AudioSource PickAxeMiss;
+    public AudioSource DougMmhmm;
+    public AudioSource DougJump;
+    
     public float PickAxeMissCooldown = 1.0f;
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
