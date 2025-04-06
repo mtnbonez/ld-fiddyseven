@@ -41,19 +41,15 @@ public class CharacterHandler : MonoBehaviour
                 float maxDistance = Vector3.Distance(transform.position, hit.point);
 
                 //Debug.Log("ROCKS HERE" + hit.collider.tag);
-                if(hit.collider.GetComponent<RockVision>())
+                if(hit.collider.gameObject.TryGetComponent(out RockVision vision))
                 {
                     // TODO: try to color the other rocks here?
-
-                    hit.collider.gameObject.TryGetComponent( out RockVision vision );
                     if (vision != null)
                     {
                         AddToBreakablesStats( vision.GetBreakableType(), 1 );
                     }
 
-                    RockVision rockType = hit.collider.GetComponent<RockVision>();
-
-                    if(rockType.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
+                    if(vision.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
                     {
                         Destroy(hit.collider.gameObject);
                         PlayAxeHitSFX();
@@ -63,11 +59,11 @@ public class CharacterHandler : MonoBehaviour
                         blockBroken = true;
 
                     }
-                    else if(rockType.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
+                    else if(vision.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
                     {
                         PlayAxeHitSFX();
                     }
-                    if(rockType.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
+                    if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
                     {
                         GameManager.Instance.GetStatsManager().AddGoldEarned(1);
 
@@ -79,7 +75,7 @@ public class CharacterHandler : MonoBehaviour
                 }
             }
 
-            Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
+            //Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
             timeStamp = Time.time + cooldown;
         }
 
