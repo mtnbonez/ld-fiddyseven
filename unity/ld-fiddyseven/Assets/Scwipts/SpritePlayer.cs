@@ -81,6 +81,7 @@ public class SpritePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // TODO: we should let the swing complete all the way?
         // Implied weighting list - jumping is most important
         if (Player.IsSwinging)
         {
