@@ -63,9 +63,15 @@ public class CharacterHandler : MonoBehaviour
                         blockBroken = true;
 
                     }
-                    else if(rockType.GetBreakableType() == BreakableType.Rock_Unbreakable)
+                    else if(rockType.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
                     {
                         PlayAxeHitSFX();
+                    }
+                    else if(rockType.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
+                    {
+                        this.GetComponentInParent<StatsManager>().AddGoldEarned(1);
+                        Debug.Log(this.GetComponentInParent<StatsManager>().playerStats.GoldEarned);
+                        //accrue gold here in gameManager & stats
                     }
                 }
             }
