@@ -355,6 +355,10 @@ PrefabInstance:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 7400000, guid: bfffa2c529126634e83964c9268a0f55, type: 2}
+    - target: {fileID: 3675029197893386469, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: firstboot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5142261513917304423, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_TagString
       value: playerCollision
