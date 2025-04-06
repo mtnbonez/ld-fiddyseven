@@ -8,28 +8,40 @@ public class ShopContentUI : MonoBehaviour
     public GameObject itemPrefab; // Assign in Inspector
     public Transform contentPanel; // Assign Scroll View Content Panel
 
-    private Dictionary<string, int> shopInventory = new Dictionary<string, int>
-    {
-        {"Pickaxe Damage", 100 },
-        {"Pickaxe Speed", 100 },
-        {"Probably something cool", 500 },
-        {"I'll never tell", 5000 },
-    };
-
     private void Start()
     {
         PopulateShop();
     }
 
+    private Dictionary<Buff.BUFF_TYPE, BuffData> GetShopInventoryData()
+    {
+        GameObject shopKeeper = GameObject.FindWithTag( "Shopkeeper" );
+        ShopInventory shopInventory = shopKeeper.GetComponentInChildren<ShopInventory>();
+
+        if (shopInventory != null)
+        {
+            return shopInventory.GetBuffInventoryData();
+        }
+
+        return null;
+    }
+
     void PopulateShop()
     {
-        // Sample shop items
-        foreach (var item in shopInventory)
+        Dictionary<Buff.BUFF_TYPE, BuffData> shopInventory = GetShopInventoryData();
+
+        if (shopInventory == null)
+        {
+            Debug.Log( "shopInventory is null!" );
+            return;
+        }
+
+        foreach (BuffData buff in shopInventory.Values)
         {
             GameObject newItem = Instantiate( itemPrefab, contentPanel );
 
-            newItem.transform.Find( "ItemName" ).GetComponent<TMP_Text>().text = item.Key;
-            newItem.transform.Find( "ItemPrice" ).GetComponent<TMP_Text>().text = $"{item.Value}G";
+            newItem.transform.Find( "ItemName" ).GetComponent<TMP_Text>().text = buff.buffName;
+            newItem.transform.Find( "ItemPrice" ).GetComponent<TMP_Text>().text = $"{buff.buffCost}G";
 
             Button buyButton = newItem.transform.Find( "BuyButton" ).GetComponent<Button>();
             buyButton.onClick.AddListener( () => PurchaseItem( newItem ) );
@@ -40,6 +52,6 @@ public class ShopContentUI : MonoBehaviour
 
     void PurchaseItem( GameObject item )
     {
-        Destroy( item ); // Removes the item from the list
+        Destroy( item );
     }
 }
