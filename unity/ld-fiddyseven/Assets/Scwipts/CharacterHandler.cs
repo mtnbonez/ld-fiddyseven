@@ -67,10 +67,13 @@ public class CharacterHandler : MonoBehaviour
                     {
                         PlayAxeHitSFX();
                     }
-                    else if(rockType.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
+                    if(rockType.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
                     {
-                        this.GetComponentInParent<StatsManager>().AddGoldEarned(1);
-                        Debug.Log(this.GetComponentInParent<StatsManager>().playerStats.GoldEarned);
+                        GameManager.Instance.GetStatsManager().AddGoldEarned(1);
+
+
+                        //Debug.Log("im at least in here");
+                        Debug.Log(GameManager.Instance.GetStatsManager().playerStats.GoldEarned);
                         //accrue gold here in gameManager & stats
                     }
                 }
