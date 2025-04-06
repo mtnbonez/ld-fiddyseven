@@ -3,12 +3,23 @@ using System.Collections;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using static UnityEngine.Rendering.DebugUI;
 
+public enum BreakableType
+{
+    undefined,
+    Rock_Normal,
+    Rock_Hard,
+    Rock_Unbreakable,
+    Rock_Gold,
+}
+
 public class RockVision : MonoBehaviour
 {
 
     [SerializeField] MeshFilter RockMesh;
 
     [SerializeField] float meltValue = 0;
+
+    [SerializeField] BreakableType breakableType;
 
     public GameObject _boundingBox;
 
