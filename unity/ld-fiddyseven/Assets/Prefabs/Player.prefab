@@ -99,14 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be86e5ea639fa4e458a6171fb02675b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Columns: 8
-  Rows: 4
-  FlipSpeed: 1
-  IdleFrames: 4
-  WalkFrames: 4
-  SwingFrames: 4
-  JumpFrames: 8
-  flipSprite: 0
+  IdleFlipSpeed: 0.5
+  JumpFlipSpeed: 0.25
+  WalkFlipSpeed: 0.25
+  SwingFlipSpeed: 0.2
+  Player: {fileID: 233807193624287491}
 --- !u!1 &1560470342193803630
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +621,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2572774711378633716}
   - component: {fileID: 233807193624287491}
+  - component: {fileID: 2489746763427761710}
+  - component: {fileID: 2359726221423454520}
+  - component: {fileID: 3675029197893386469}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -668,6 +668,59 @@ MonoBehaviour:
   maxJump: 4
   jumpKeyHeld: 0
   isJumping: 0
+--- !u!95 &2489746763427761710
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276746501406612376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dff6a1f57b38a0b4d8a203bfab678599, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &2359726221423454520
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276746501406612376}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: bfffa2c529126634e83964c9268a0f55, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: bfffa2c529126634e83964c9268a0f55, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &3675029197893386469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276746501406612376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5832ad460699364dbaf39a061f12824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstboot: 0
+  PlayIntro: {fileID: 7400000, guid: bfffa2c529126634e83964c9268a0f55, type: 2}
 --- !u!1 &8963985016174580194
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,14 +853,6 @@ PrefabInstance:
     - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Name
       value: ShopPromptText
-      objectReference: {fileID: 0}
-    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Pivot.x

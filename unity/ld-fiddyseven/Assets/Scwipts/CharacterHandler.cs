@@ -11,9 +11,10 @@ public class CharacterHandler : MonoBehaviour
     public AudioSource PickAxeHit;
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
-    public void Update()
+    public bool TryBreakBlock()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > timeStamp)
+        bool blockBroken = false;
+        if (Time.time > timeStamp)
         {
             Vector3 mousePosition = Input.mousePosition;
 
@@ -42,13 +43,17 @@ public class CharacterHandler : MonoBehaviour
                     PickAxeHit.Play();
 
                     Destroy(rockBreakVFX, rockBreakdur);
+                    blockBroken = true;
                 }
             }
 
             Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
             timeStamp = Time.time + cooldown;
         }
+
+        return blockBroken;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Ground" || collision.collider.tag == "pickaxe")

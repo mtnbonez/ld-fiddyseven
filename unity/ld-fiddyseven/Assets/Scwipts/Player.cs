@@ -16,7 +16,13 @@ public class Player : MonoBehaviour
     private CharacterHandler _characterHandler;
     [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
-    
+    private bool isSwinging = false;
+
+    public bool IsJumping => isJumping || !_characterHandler.IsGrounded;
+    public bool IsWalking => Input.GetAxisRaw("Horizontal") != 0;
+    public bool IsFlipped => IsWalking && Input.GetAxisRaw("Horizontal") < 0;
+    public bool IsIdle => !IsJumping;
+    public bool IsSwinging => isSwinging;
 
     // player State for shop
     private GameObject currentShop;
@@ -33,7 +39,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        HandleKeyboard();
+        HandleInput();
         UpdateCameraPosition();
     }
 
@@ -57,7 +63,7 @@ public class Player : MonoBehaviour
         }
     }
     
-    private void HandleKeyboard()
+    private void HandleInput()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
 
@@ -65,19 +71,12 @@ public class Player : MonoBehaviour
 
         transform.position += moveDirection * MovementSensitivity * Time.deltaTime;
 
-
-
-
-
         // Jump can ONLY be peformed if grounded
-        // DO: we should make the jump force "variable", so you can have long & short jumps
-        // Reference Catnip Catastrophe's `PlayerController.Update()` for more details
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("w"))
         {
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
-
-                Debug.Log("Player Jumped");
+                //Debug.Log("Player Jumped");
                 isJumping = true;
                 _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + initialJumpForce, 0);
             }
@@ -90,43 +89,15 @@ public class Player : MonoBehaviour
             isJumping = false;
         }
 
-
-
-        //if (Input.GetKeyDown("s") || Input.GetKey("s"))
-        //{
-        //    float forceMultiplier = MovementSensitivity;
-        //    if (!_characterHandler.IsGrounded)
-        //    {
-        //        forceMultiplier *= AirborneMultiplier;
-        //    }
-
-        //    _rb.AddForce(Vector3.down * forceMultiplier);
-        //}
-
-        //if (Input.GetKeyDown("a") || Input.GetKey("a"))
-        //{
-
-
-
-
-        //    if (!_characterHandler.IsGrounded)
-        //    {
-        //       // forceMultiplier *= AirborneMultiplier;
-        //    }
-
-        //  //  _rb.AddForce(Vector3.left * forceMultiplier);
-        //}
-
-        //if (Input.GetKeyDown("d") || Input.GetKey("d"))
-        //{
-        //    float forceMultiplier = MovementSensitivity;
-        //    if (!_characterHandler.IsGrounded)
-        //    {
-        //        forceMultiplier *= AirborneMultiplier;
-        //    }
-
-        //    _rb.AddForce(Vector3.right * forceMultiplier);
-        //}
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
+        {
+            bool blockBroken = _characterHandler.TryBreakBlock();
+            isSwinging = true;
+        }
+        else
+        {
+            isSwinging = false;
+        }
     }
     
     private void UpdateCameraPosition()
