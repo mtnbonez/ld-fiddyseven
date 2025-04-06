@@ -53,7 +53,7 @@ public class CharacterHandler : MonoBehaviour
 
                     RockVision rockType = hit.collider.GetComponent<RockVision>();
 
-                    if(rockType.GetBreakableType() != BreakableType.Rock_Unbreakable)
+                    if(rockType.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
                     {
                         Destroy(hit.collider.gameObject);
                         PlayAxeHitSFX();
