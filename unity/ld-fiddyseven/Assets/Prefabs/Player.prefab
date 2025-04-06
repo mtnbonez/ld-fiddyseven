@@ -99,14 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be86e5ea639fa4e458a6171fb02675b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Columns: 8
-  Rows: 4
-  FlipSpeed: 1
-  IdleFrames: 4
-  WalkFrames: 4
-  SwingFrames: 4
-  JumpFrames: 8
-  flipSprite: 0
+  IdleFlipSpeed: 0.5
+  JumpFlipSpeed: 0.25
+  WalkFlipSpeed: 0.25
+  SwingFlipSpeed: 0.2
+  Player: {fileID: 233807193624287491}
 --- !u!1 &1560470342193803630
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,14 +797,6 @@ PrefabInstance:
     - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Name
       value: ShopPromptText
-      objectReference: {fileID: 0}
-    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 817711748254196034, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_Pivot.x
