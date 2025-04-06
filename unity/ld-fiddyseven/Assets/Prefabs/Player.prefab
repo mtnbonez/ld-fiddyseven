@@ -451,7 +451,8 @@ MonoBehaviour:
   cooldown: 0.01
   IsGrounded: 0
   PickAxeHit: {fileID: 6298207853160030618}
-  rockBreak: {fileID: 1506160400761069742, guid: 07fc0ee033e2c614e85e6e4b9814f29c, type: 3}
+  rockBreak: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+  rockBreakdur: 3
 --- !u!136 &7470087320205914096
 CapsuleCollider:
   m_ObjectHideFlags: 0
