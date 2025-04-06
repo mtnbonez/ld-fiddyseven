@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -5,27 +6,31 @@ using UnityEngine.TextCore.Text;
 public class ShopTrigger : MonoBehaviour
 {
     private GameObject shopPrompt;
-
     private Player player;
 
     private void Start()
     {
         player = GameObject.FindWithTag( "Player" ).GetComponent<Player>();
 
-        if ( player == null)
+        if ( player != null)
         {
-            shopPrompt = player.GetComponentInChildren<Transform>().Find( "ShopPromptText" )?.gameObject;
-        }
+            Transform character = player.transform.Find( "Character" );
 
-        shopPrompt.SetActive( false );
+            if ( character != null)
+            {
+                shopPrompt = character.GetComponentInChildren<Transform>().Find( "ShopPromptText" )?.gameObject;
+                shopPrompt.SetActive( false );
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collision )
     {
-        if (collision.CompareTag( "Player" ))
+        player = collision.GetComponentInParent<Player>();
+
+        if (player != null && player.CompareTag( "Player" ))
         {
             shopPrompt.SetActive( true );
-            player = collision.GetComponentInParent<Player>();
             player.SetCurrentShop( gameObject.transform.root.gameObject );
             UpdatePlayerIsNearShop( player, true );
         }
@@ -33,13 +38,20 @@ public class ShopTrigger : MonoBehaviour
 
     private void OnTriggerExit( Collider collision )
     {
-        if (collision.CompareTag( "Player" ))
+        player = collision.GetComponentInParent<Player>();
+        Transform uiCanvas = FindFirstObjectByType<Canvas>().transform;
+
+        if (player != null && player.CompareTag( "Player" ))
         {
             shopPrompt.SetActive( false );
-            player = collision.GetComponentInParent<Player>();
             player.SetCurrentShop( null );
             UpdatePlayerIsNearShop( player, false );
         }
+
+        if (uiCanvas != null)
+        {
+            uiCanvas.GetComponentInChildren<ShopUI>().CloseShop();
+        } 
     }
 
     private void UpdatePlayerIsNearShop( Player player, bool isNearShop )
