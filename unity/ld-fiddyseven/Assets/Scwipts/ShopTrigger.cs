@@ -1,23 +1,35 @@
 using UnityEditor.Build;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class ShopTrigger : MonoBehaviour
 {
-    public GameObject shopPrompt;
-
+    private GameObject shopPrompt;
     private Player player;
 
     private void Start()
     {
-        shopPrompt.SetActive( false );
+        player = GameObject.FindWithTag( "Player" ).GetComponent<Player>();
+
+        if ( player != null)
+        {
+            Transform character = player.transform.Find( "Character" );
+
+            if ( character != null)
+            {
+                shopPrompt = character.GetComponentInChildren<Transform>().Find( "ShopPromptText" )?.gameObject;
+                shopPrompt.SetActive( false );
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collision )
     {
-        if (collision.CompareTag( "Player" ))
+        player = collision.GetComponentInParent<Player>();
+
+        if (player != null && player.CompareTag( "Player" ))
         {
             shopPrompt.SetActive( true );
-            player = collision.GetComponentInParent<Player>();
             player.SetCurrentShop( gameObject.transform.root.gameObject );
             UpdatePlayerIsNearShop( player, true );
         }
@@ -25,10 +37,11 @@ public class ShopTrigger : MonoBehaviour
 
     private void OnTriggerExit( Collider collision )
     {
-        if (collision.CompareTag( "Player" ))
+        player = collision.GetComponentInParent<Player>();
+
+        if (player != null && player.CompareTag( "Player" ))
         {
             shopPrompt.SetActive( false );
-            player = collision.GetComponentInParent<Player>();
             player.SetCurrentShop( null );
             UpdatePlayerIsNearShop( player, false );
         }
