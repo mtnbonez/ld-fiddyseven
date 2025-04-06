@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Win
   - Vision
+  - playerCollision
   layers:
   - Default
   - TransparentFX

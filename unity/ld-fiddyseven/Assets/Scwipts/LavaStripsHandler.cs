@@ -24,7 +24,7 @@ public class LavaStripsHandler : MonoBehaviour
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.up * riseSpeed, Time.deltaTime);
             Destroy(collision.gameObject);
         }
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag == "playerCollision")
         {
             Time.timeScale = 0;
             canvas.SetActive(true);
