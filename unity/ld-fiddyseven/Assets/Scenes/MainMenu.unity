@@ -299,6 +299,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+--- !u!1 &1018762095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2220171296689766164, guid: eecc5f0924c404547bd5f4d1e22707e2, type: 3}
+  m_PrefabInstance: {fileID: 6905709346586641290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1047759217 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7618488132352421657, guid: 0df0b8e59db3186409a31603db1a2ece, type: 3}
@@ -638,6 +643,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 134139692121091741, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 198174956941422097, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 327021752266749769, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 327912010135781471, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
     - target: {fileID: 509426169550545581, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
@@ -678,10 +699,258 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 728402487655374184, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1506832039945236841, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1658468124978852109, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1809799770904821390, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1810929018937393995, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1857138661251748129, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 1919563013480881085, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
     - target: {fileID: 1959767138600691832, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
       propertyPath: m_Name
       value: LavaWall
       objectReference: {fileID: 0}
+    - target: {fileID: 2140419507392957072, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2331936320729313765, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2343337494028064096, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2389763639767737341, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2548812101424642074, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2584705947101584619, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2667361940605083693, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2721562396271239173, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2841892118816396021, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 2984302971181006510, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4037690803541886975, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4108177248004277906, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4112663717359056915, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4121265234990929180, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4375248599053328517, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4539532234844025011, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4737404113356745457, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4919803848905211956, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4950738288295731236, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 4986850024931287799, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 5263055400678425740, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 5360595449727537821, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 5546927282956236464, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 5802454978945632508, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 5937065457074289106, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6007041727220650543, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6030331240845511650, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6060701306386475035, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6274382304931617828, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6421588971279615974, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6525634026358357514, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6580378088166626170, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6581735333097771261, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6615698523325385084, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6680030479501580001, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 6896374083054415921, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7017943370505488257, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7087312354594301802, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7294741150771192914, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7327497687488930585, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7733841398096493554, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7757706716828642118, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7919217990228044713, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7940119065585089626, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 7957813660107904856, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8101717620668829736, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8113350650189041334, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8181284071356651303, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8267480169924208157, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8272493796121729126, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8376054712139951148, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8570850595295769007, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8764897546627956210, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 8836815057382870479, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
+    - target: {fileID: 9080239313819836672, guid: b77d9b2733d636f40b8eaa05e371b401, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1018762095}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
