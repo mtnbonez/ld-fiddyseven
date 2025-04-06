@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class LavaStripsHandler : MonoBehaviour
 {
     public float fallSpeed = 1.0f;
     private bool hitRock = false;
+    public GameObject canvas;
 
     private void Update()
     {
@@ -33,9 +34,15 @@ public class LavaStripsHandler : MonoBehaviour
             Destroy(collision.gameObject);
             
         }
+        if (collision.collider.tag == "Player")
+        {
+            Time.timeScale = 0;
+            canvas.SetActive(true);
+
+        }
 
 
-           
+
     }
     IEnumerator speedChangeDelay(float delay)
     {
