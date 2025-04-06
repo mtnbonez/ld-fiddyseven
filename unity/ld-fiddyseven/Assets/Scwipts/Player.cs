@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
     private bool isSwinging = false;
-    private int goldAmount = 0;
 
     public bool IsJumping => isJumping || !_characterHandler.IsGrounded;
     public bool IsWalking => Input.GetAxisRaw("Horizontal") != 0;
