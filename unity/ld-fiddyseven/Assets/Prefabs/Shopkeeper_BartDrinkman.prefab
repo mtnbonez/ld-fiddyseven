@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998804810321557628, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 704f52469b78bf940a1110940dac87dc, type: 2}
     - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_Name
       value: Shopkeeper_BartDrinkman

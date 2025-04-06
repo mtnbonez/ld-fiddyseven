@@ -5,24 +5,7 @@ using UnityEngine.TextCore.Text;
 
 public class ShopTrigger : MonoBehaviour
 {
-    private GameObject shopPrompt;
     private Player player;
-
-    private void Start()
-    {
-        player = GameObject.FindWithTag( "Player" ).GetComponent<Player>();
-
-        if ( player != null)
-        {
-            Transform character = player.transform.Find( "Character" );
-
-            if ( character != null)
-            {
-                shopPrompt = character.GetComponentInChildren<Transform>().Find( "ShopPromptText" )?.gameObject;
-                shopPrompt.SetActive( false );
-            }
-        }
-    }
 
     private void OnTriggerEnter(Collider collision )
     {
@@ -30,7 +13,7 @@ public class ShopTrigger : MonoBehaviour
 
         if (player != null && player.CompareTag( "Player" ))
         {
-            shopPrompt.SetActive( true );
+            collision.transform.Find( "ShopPromptText" ).gameObject.SetActive(true);
             player.SetCurrentShop( gameObject.transform.root.gameObject );
             UpdatePlayerIsNearShop( player, true );
         }
@@ -43,7 +26,7 @@ public class ShopTrigger : MonoBehaviour
 
         if (player != null && player.CompareTag( "Player" ))
         {
-            shopPrompt.SetActive( false );
+            collision.transform.Find( "ShopPromptText" ).gameObject.SetActive( false );
             player.SetCurrentShop( null );
             UpdatePlayerIsNearShop( player, false );
         }
