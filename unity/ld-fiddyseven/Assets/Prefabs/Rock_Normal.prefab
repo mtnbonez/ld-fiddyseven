@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6235656129192664475}
   - component: {fileID: 6411181756187378025}
   m_Layer: 3
-  m_Name: Rocks
+  m_Name: Rock_Normal
   m_TagString: pickaxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
