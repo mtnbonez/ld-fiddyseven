@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-7428120436391944166
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_swing_4_{-7428120436391944166}
+  m_AudioClip: {fileID: 8300000, guid: 4e68877c036494d4c995427ae14bab13, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6671424524602199783
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_swing_1_{-6671424524602199783}
+  m_AudioClip: {fileID: 8300000, guid: a61690a0c908f92468364814ba2dbfca, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1293666733652341480
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_swing_3_{-1293666733652341480}
+  m_AudioClip: {fileID: 8300000, guid: ddfd16a20b975ae4ca048b82f85310ff, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1432718481671255635
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_swing_5_{1432718481671255635}
+  m_AudioClip: {fileID: 8300000, guid: 58aed13151edea34f80a8116d8d91332, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3720772023751526166
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_swing_2_{3720772023751526166}
+  m_AudioClip: {fileID: 8300000, guid: fb3651a81a029944e9cd3b59cba90ab9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DougSwing
+  m_Volume: 0
+  m_Pitch: -122
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -100, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -6671424524602199783}
+  - {fileID: 3720772023751526166}
+  - {fileID: -1293666733652341480}
+  - {fileID: -7428120436391944166}
+  - {fileID: 1432718481671255635}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0

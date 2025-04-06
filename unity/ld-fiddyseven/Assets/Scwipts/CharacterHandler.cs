@@ -5,15 +5,19 @@ public class CharacterHandler : MonoBehaviour
 {
     [SerializeField] private float cooldown = 1.25f;
     private float timeStamp;
-    private float nextMissSFX;
+    private float nextPickAxeMissSFX;
+    private float nextDougSwingSFX;
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
     public bool IsGrounded = false;
 
     public AudioSource PickAxeHit;
     public AudioSource PickAxeMiss;
-
     public float PickAxeMissCooldown = 1.0f;
+    
+    public AudioSource DougSwing;
+    public float DougSwingMissCooldown = 1.0f;
+
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
     public bool TryBreakBlock()
@@ -45,14 +49,14 @@ public class CharacterHandler : MonoBehaviour
                     */
                     GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
                     Destroy(hit.collider.gameObject);
-                    PickAxeHit.Play();
+                    PlayAxeHitSFX();
 
                     Destroy(rockBreakVFX, rockBreakdur);
                     blockBroken = true;
                 }
                 if(hit.collider.tag == "unbreakable" && hitDistance > maxDistance)
                 {
-                    PickAxeHit.Play();
+                    PlayAxeHitSFX();
                 }
             }
 
@@ -61,16 +65,35 @@ public class CharacterHandler : MonoBehaviour
         }
 
         // DO: This logic should move to Player (pukes)
-        if (Time.time > nextMissSFX)
+        if (Time.time > nextPickAxeMissSFX)
         {
             if (!blockBroken)
             {
-                PickAxeMiss.Play();
+                PlayAxeMissSFX();
+                
             }
-            nextMissSFX = Time.time + PickAxeMissCooldown;
+            nextPickAxeMissSFX = Time.time + PickAxeMissCooldown;
         }
 
         return blockBroken;
+    }
+
+    private void PlayAxeMissSFX()
+    {
+        PickAxeMiss.Play();
+        
+        // Special handling to keep Doug's swing SFX less often
+        if (Time.realtimeSinceStartup > nextDougSwingSFX)
+        {
+            DougSwing.Play();
+            nextDougSwingSFX = Time.time + DougSwingMissCooldown;
+        }
+        
+    }
+
+    private void PlayAxeHitSFX()
+    {
+        PickAxeHit.Play();
     }
 
     private void OnCollisionEnter(Collision collision)
