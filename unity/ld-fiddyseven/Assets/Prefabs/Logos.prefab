@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7867583836845805746}
   - component: {fileID: 1634621956866723106}
-  - component: {fileID: 5660604804349088375}
   - component: {fileID: 9051099586070955218}
   m_Layer: 0
   m_Name: Intro Camera
@@ -85,14 +84,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5660604804349088375
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136122448396431242}
-  m_Enabled: 1
 --- !u!114 &9051099586070955218
 MonoBehaviour:
   m_ObjectHideFlags: 0
