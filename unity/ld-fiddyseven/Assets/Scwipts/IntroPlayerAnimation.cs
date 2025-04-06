@@ -1,24 +1,29 @@
 using UnityEngine;
+using System.Collections;
 
 public class IntroPlayerAnimation : MonoBehaviour
 {
 
     [SerializeField] public bool firstboot = false;
-    private Animation anim;
-    public AnimationClip PlayIntro;
+    [SerializeField] public float CameraDelay = 0f;
+    [SerializeField] private Camera PlayerCamera;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        anim = gameObject.GetComponent<Animation>();
-
         if (firstboot)
         {
-            anim.clip = PlayIntro;
-            anim.Play();
+            PlayerCamera.enabled = false;
+            StartCoroutine(ActivateCam(CameraDelay));
         }
     }
-
+    IEnumerator ActivateCam(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        PlayerCamera.enabled = true;
+    }
 }
+
+
+
