@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         // Jump can ONLY be peformed if grounded
         // DO: we should make the jump force "variable", so you can have long & short jumps
         // Reference Catnip Catastrophe's `PlayerController.Update()` for more details
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("w"))
         {
             if(_characterHandler.IsGrounded && !jumpKeyHeld)
             {
@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
 
             jumpKeyHeld = true;
         }
-        else if(Input.GetKeyUp("w"))
+        else if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp("w"))
         {
             jumpKeyHeld = false;
             isJumping = false;
