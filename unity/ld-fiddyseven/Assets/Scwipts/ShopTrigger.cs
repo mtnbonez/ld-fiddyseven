@@ -1,7 +1,4 @@
-using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class ShopTrigger : MonoBehaviour
 {

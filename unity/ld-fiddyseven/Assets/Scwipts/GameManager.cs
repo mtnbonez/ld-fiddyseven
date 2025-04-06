@@ -46,4 +46,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void SwitchSceneToIndex(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
+    public int GetNumOfScenes()
+    {
+        return SceneManager.sceneCountInBuildSettings;
+    }
 }
