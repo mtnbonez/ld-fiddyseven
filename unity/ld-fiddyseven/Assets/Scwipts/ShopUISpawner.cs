@@ -1,8 +1,16 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopUISpawner : MonoBehaviour
 {
     public GameObject shopUIPrefab;
+
+    [SerializeField]
+    private Sprite ShopkeeperSprite;
+
+    [SerializeField]
+    private string ShopkeeperName;
 
     private Transform uiCanvas;
     private Player player;
@@ -38,5 +46,15 @@ public class ShopUISpawner : MonoBehaviour
         GameObject shopUI = Instantiate( shopUIPrefab, uiCanvas );
         shopUI.transform.SetParent( uiCanvas, false );
         uiCanvas.GetComponentInChildren<ShopUI>().SetIsShopOpen( true );
+    }
+
+    public Sprite GetShopkeeperSprite()
+    {
+        return ShopkeeperSprite;
+    }
+
+    public string GetShopkeeperName()
+    {
+        return ShopkeeperName;
     }
 }

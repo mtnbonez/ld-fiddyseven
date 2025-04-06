@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1361569127, guid: 4f6cd844b79c5b549b385130084a2d30, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButton: {fileID: 4981010294624647110}
+  shopKeeperImage: {fileID: 6696330945380939343}
+  shopKeeperTMP: {fileID: 2842845909875600543}
 --- !u!1 &5522202052335065993
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GIZMO LONGMANEAAAAAAAAAAA
+  m_text: Cool Name Here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -433,7 +435,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.3
+  m_fontSize: 54.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -685,11 +687,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1224197623129994319, guid: 48212c0360a6eb7488d7f9c097d9dbff, type: 3}
       propertyPath: m_Size
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1224197623129994319, guid: 48212c0360a6eb7488d7f9c097d9dbff, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358163410656016970, guid: 48212c0360a6eb7488d7f9c097d9dbff, type: 3}
       propertyPath: m_AnchorMax.x

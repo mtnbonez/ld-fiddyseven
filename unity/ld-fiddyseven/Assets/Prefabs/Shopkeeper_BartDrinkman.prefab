@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: ShopkeeperName
+      value: Bart Drinkman
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: ShopkeeperSprite
+      value: 
+      objectReference: {fileID: -271409103, guid: c2c4a43d6886fc2419b7cc42d788ed67, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
