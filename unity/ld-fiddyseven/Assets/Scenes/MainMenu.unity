@@ -1066,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4259902916444812682, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4308250041387285627, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -1080,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5142261513917304423, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7276746501406612376, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_Name
@@ -2642,10 +2646,6 @@ PrefabInstance:
     - target: {fileID: 6423156432264694316, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
       propertyPath: m_Name
       value: QuitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423156432264694316, guid: be4bb28eb19a7b44d8c3887f5cab33bc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
