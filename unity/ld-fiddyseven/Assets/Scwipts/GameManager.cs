@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     // Put stats & buffs here!
     private BuffManager buffManager = new BuffManager();
+    private StatsManager statsManager = new StatsManager();
 
     // Here's an example - follow this
     public int LevelCompleted = 0;
@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
     public BuffManager GetBuffManager()
     {
         return buffManager;
+    }
+
+    public StatsManager GetStatsManager()
+    {
+        return statsManager;
     }
 
     public void SwitchScene_MainMenu()

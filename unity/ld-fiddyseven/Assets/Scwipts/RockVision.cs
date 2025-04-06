@@ -19,7 +19,7 @@ public class RockVision : MonoBehaviour
 
     [SerializeField] float meltValue = 0;
 
-    [SerializeField] BreakableType breakableType;
+    [SerializeField] readonly BreakableType breakableType;
 
     public GameObject _boundingBox;
 
@@ -31,6 +31,11 @@ public class RockVision : MonoBehaviour
         //PaintVision(other);
     }
     */
+
+    public BreakableType GetBreakableType()
+    {
+        return breakableType;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1,7 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
 
-public class BuffManager : MonoBehaviour
+public class BuffManager
 {
     private List<Buff.BUFF_TYPE> activeBuffs = new List<Buff.BUFF_TYPE>();
 

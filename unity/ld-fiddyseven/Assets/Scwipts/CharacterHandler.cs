@@ -40,13 +40,13 @@ public class CharacterHandler : MonoBehaviour
                 if(hit.collider.tag == "pickaxe" && hitDistance > maxDistance)
                 {
                     // TODO: try to color the other rocks here?
-                    /*
-                    hit.collider.gameObject.TryGetComponent(out RockVision vision);
+
+                    hit.collider.gameObject.TryGetComponent( out RockVision vision );
                     if (vision != null)
                     {
-
+                        AddToBreakablesStats( vision.GetBreakableType(), 1 );
                     }
-                    */
+
                     GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
                     Destroy(hit.collider.gameObject);
                     PlayAxeHitSFX();
@@ -94,6 +94,37 @@ public class CharacterHandler : MonoBehaviour
     private void PlayAxeHitSFX()
     {
         PickAxeHit.Play();
+    }
+
+    private void AddToBreakablesStats( BreakableType type, int amount )
+    {
+        StatsManager statsManager = GameManager.Instance.GetStatsManager();
+
+        switch (type)
+        {
+            case BreakableType.Rock_Normal:
+                statsManager.AddNormalRocksBroken( amount );
+                Debug.Log( $"Normal Rocks Broken: {statsManager.playerStats.NormalRocksBroken}" );
+                break;
+
+            case BreakableType.Rock_Hard:
+                Debug.Log( "Hard rock requires more hits!" );
+                break;
+
+            case BreakableType.Rock_Unbreakable:
+                Debug.Log( "This rock is unbreakable!" );
+                break;
+
+            case BreakableType.Rock_Gold:
+                Debug.Log( "Gold rock broken! Extra rewards!" );
+                break;
+
+            case BreakableType.undefined:
+            default:
+                Debug.LogWarning( "Undefined breakable type." );
+                break;
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
