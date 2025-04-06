@@ -18,7 +18,7 @@ public class LavaStripsHandler : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("collided");
-        if (collision.collider.tag == "pickaxe" && hitRock == false)
+        if (collision.collider.tag == "pickaxe" && hitRock == false || collision.collider.tag == "unbreakable" && hitRock == false)
         {
             //hitRock = true;
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.up * riseSpeed, Time.deltaTime);

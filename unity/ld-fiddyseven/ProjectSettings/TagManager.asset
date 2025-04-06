@@ -9,6 +9,8 @@ TagManager:
   - Win
   - Vision
   - playerCollision
+  - Shopkeeper
+  - unbreakable
   layers:
   - Default
   - TransparentFX
