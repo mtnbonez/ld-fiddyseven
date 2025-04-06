@@ -19,7 +19,7 @@ public class RockVision : MonoBehaviour
 
     [SerializeField] float meltValue = 0;
 
-    [SerializeField] BreakableType breakableType;
+    [SerializeField] public BreakableType breakableType;
 
     public GameObject _boundingBox;
 

@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class CharacterHandler : MonoBehaviour
@@ -20,6 +21,9 @@ public class CharacterHandler : MonoBehaviour
 
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
+        
+    public BreakableType checkUnbreakable;
+    
     public bool TryBreakBlock()
     {
         bool blockBroken = false;
@@ -37,7 +41,7 @@ public class CharacterHandler : MonoBehaviour
                 float maxDistance = Vector3.Distance(transform.position, hit.point);
 
                 //Debug.Log("ROCKS HERE" + hit.collider.tag);
-                if(hit.collider.tag == "pickaxe" && hitDistance > maxDistance)
+                if(hit.collider.GetComponent<RockVision>())
                 {
                     // TODO: try to color the other rocks here?
                     /*
@@ -47,16 +51,25 @@ public class CharacterHandler : MonoBehaviour
 
                     }
                     */
-                    GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
-                    Destroy(hit.collider.gameObject);
-                    PlayAxeHitSFX();
 
-                    Destroy(rockBreakVFX, rockBreakdur);
-                    blockBroken = true;
-                }
-                if(hit.collider.tag == "unbreakable" && hitDistance > maxDistance)
-                {
-                    PlayAxeHitSFX();
+                   RockVision rockType = hit.collider.GetComponent<RockVision>();
+
+                    if(rockType.breakableType != checkUnbreakable)
+                    {
+                        Destroy(hit.collider.gameObject);
+                        PlayAxeHitSFX();
+                        GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
+
+                        Destroy(rockBreakVFX, rockBreakdur);
+                        blockBroken = true;
+
+                    }
+                    if(rockType.breakableType == checkUnbreakable)
+                    {
+                        PlayAxeHitSFX();
+                    }
+
+
                 }
             }
 
