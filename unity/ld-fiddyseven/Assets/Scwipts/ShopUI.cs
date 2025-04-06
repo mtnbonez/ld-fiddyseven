@@ -25,6 +25,7 @@ public class ShopUI : MonoBehaviour
         if (shopkeeper != null)
         {
             shopKeeperImage.sprite = shopkeeper.GetShopkeeperSprite();
+            shopKeeperImage.material = shopkeeper.GetShopkeeperMaterial();
         }
     }
 

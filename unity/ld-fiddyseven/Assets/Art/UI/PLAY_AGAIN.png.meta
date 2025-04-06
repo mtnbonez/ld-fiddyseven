@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8421cd46f90eb274db7211efc43acaaf
+guid: 80742356e48651c4aa0ec582a3797b4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_0
+      name: PLAY_AGAIN_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 207d04a02a8c2c94c855ed1d8f0d801a
-      internalID: 1886412348
+      spriteID: d2376c928bb80fd4baa3e8266420af9e
+      internalID: -1809986856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_1
+      name: PLAY_AGAIN_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 200
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2238f302e4b403244825b1d748a66731
-      internalID: 373553636
+      spriteID: 042a3a05af2f3f742ae7c795517ecc5d
+      internalID: -487506811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_2
+      name: PLAY_AGAIN_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 400
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1585a99d9048f4b4e83482f13d87eecd
-      internalID: -1367014319
+      spriteID: 4c98b0133fce84e45b0cd02339d56f87
+      internalID: -1737938683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_3
+      name: PLAY_AGAIN_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 600
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3328b8db54e50d9409378cba593d55fd
-      internalID: 1222661863
+      spriteID: 32ba691dd79069b41b7c697a4606a6dd
+      internalID: -355716733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_4
+      name: PLAY_AGAIN_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 800
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d17d7ce89db58b449113af8512e8104
-      internalID: -561780424
+      spriteID: 15106dabba7e7b74cb4a8ff1aa8cc219
+      internalID: -841428048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_5
+      name: PLAY_AGAIN_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 1000
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e02072faa019d0d4fa56a0054926cd1e
-      internalID: 1009946835
+      spriteID: 18c5eb36b9a8b0b4da05df4b661f57d6
+      internalID: 1529586801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_6
+      name: PLAY_AGAIN_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 1200
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1553d365e96c1fe45b6ced98d02f732b
-      internalID: 933818343
+      spriteID: 6b190c52567ff7044ae807bec12917e6
+      internalID: -1045275933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unit_D16_idle_sheet_7
+      name: PLAY_AGAIN_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 1400
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a751d94ab716e3540b3c56e88631c413
-      internalID: 785312297
+      spriteID: 9171adf84b32a4f4a9c3bcbae0df8f19
+      internalID: 1076330229
       vertices: []
       indices: 
       edges: []
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4553e365abfd9f146bbe45445b18d688
+    spriteID: 00ecdf8bd0f41944d938b765e0ce23fa
     internalID: 0
     vertices: []
     indices: 
@@ -299,14 +299,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Unit_D16_idle_sheet_0: 1886412348
-      Unit_D16_idle_sheet_1: 373553636
-      Unit_D16_idle_sheet_2: -1367014319
-      Unit_D16_idle_sheet_3: 1222661863
-      Unit_D16_idle_sheet_4: -561780424
-      Unit_D16_idle_sheet_5: 1009946835
-      Unit_D16_idle_sheet_6: 933818343
-      Unit_D16_idle_sheet_7: 785312297
+      PLAY_AGAIN_0: -1809986856
+      PLAY_AGAIN_1: -487506811
+      PLAY_AGAIN_2: -1737938683
+      PLAY_AGAIN_3: -355716733
+      PLAY_AGAIN_4: -841428048
+      PLAY_AGAIN_5: 1529586801
+      PLAY_AGAIN_6: -1045275933
+      PLAY_AGAIN_7: 1076330229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

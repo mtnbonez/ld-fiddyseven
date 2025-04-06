@@ -10,7 +10,11 @@ public class ShopUISpawner : MonoBehaviour
     private Sprite ShopkeeperSprite;
 
     [SerializeField]
+    private Material ShopkeeperMaterial;
+
+    [SerializeField]
     private string ShopkeeperName;
+
 
     private Transform uiCanvas;
     private Player player;
@@ -57,5 +61,10 @@ public class ShopUISpawner : MonoBehaviour
     public string GetShopkeeperName()
     {
         return ShopkeeperName;
+    }
+
+    public Material GetShopkeeperMaterial()
+    {
+        return ShopkeeperMaterial;
     }
 }
