@@ -9,8 +9,10 @@ public class CharacterHandler : MonoBehaviour
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
     public bool IsGrounded = false;
+
     public AudioSource PickAxeHit;
     public AudioSource PickAxeMiss;
+
     public float PickAxeMissCooldown = 1.0f;
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
@@ -47,6 +49,10 @@ public class CharacterHandler : MonoBehaviour
 
                     Destroy(rockBreakVFX, rockBreakdur);
                     blockBroken = true;
+                }
+                if(hit.collider.tag == "unbreakable" && hitDistance > maxDistance)
+                {
+                    PickAxeHit.Play();
                 }
             }
 

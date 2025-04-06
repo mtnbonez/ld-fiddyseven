@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-9019944489523283907
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_4_{-9019944489523283907}
+  m_AudioClip: {fileID: 8300000, guid: 3fd25794da4a88d4a8e8c0281dd2fdf2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6601081134064120375
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_2_{-6601081134064120375}
+  m_AudioClip: {fileID: 8300000, guid: e56f62e74a6517e4eb38bd73a6e3cae7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6593219541929393510
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_6_{-6593219541929393510}
+  m_AudioClip: {fileID: 8300000, guid: 637094f379ad619449cae3f0cbecd8e2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-411805937644146187
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_5_{-411805937644146187}
+  m_AudioClip: {fileID: 8300000, guid: a846bc10b43091a4d8b5201a74542a20, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2223144869452085189
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_1_{2223144869452085189}
+  m_AudioClip: {fileID: 8300000, guid: 7a51414240b14a140940c7d8fe14ee88, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DougJump
+  m_Volume: 0
+  m_Pitch: -84
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -100, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 2223144869452085189}
+  - {fileID: -6601081134064120375}
+  - {fileID: 7192665935638742323}
+  - {fileID: -9019944489523283907}
+  - {fileID: -411805937644146187}
+  - {fileID: -6593219541929393510}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7192665935638742323
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: doug_jumping_3_{7192665935638742323}
+  m_AudioClip: {fileID: 8300000, guid: 715a324447c13f549b4a9e26219cc543, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioSource ambientSfx;
 
-    // Put stats & buffs here! 
+    // Put stats & buffs here!
+    private BuffManager buffManager = new BuffManager();
 
     // Here's an example - follow this
     public int LevelCompleted = 0;
+    public int gold = 0;
 
     private void Awake()
     {
@@ -23,6 +25,11 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public BuffManager GetBuffManager()
+    {
+        return buffManager;
     }
 
     public void SwitchScene_MainMenu()

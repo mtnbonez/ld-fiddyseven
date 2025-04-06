@@ -17,7 +17,14 @@ public class Player : MonoBehaviour
     [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
     private bool isSwinging = false;
-    private int goldAmount = 0;
+
+    public AudioSource DougMmhmm;
+    public float MmhmmSFXCooldown = 1.0f;
+    private float nextMmhmmSFX;
+
+    public AudioSource DougJump;
+    public float JumpSFXCooldown = 1.0f;
+    private float nextJumpSFX;
 
     public bool IsJumping => isJumping || !_characterHandler.IsGrounded;
     public bool IsWalking => Input.GetAxisRaw("Horizontal") != 0;
@@ -80,6 +87,12 @@ public class Player : MonoBehaviour
                 //Debug.Log("Player Jumped");
                 isJumping = true;
                 _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + initialJumpForce, 0);
+
+                if (Time.time > nextJumpSFX)
+                {
+                    DougJump.Play();
+                    nextJumpSFX = Time.time + JumpSFXCooldown;
+                }
             }
 
             jumpKeyHeld = true;
@@ -115,5 +128,14 @@ public class Player : MonoBehaviour
             b = UnityEngine.Random.Range(0.0f, 1.0f),
             a = UnityEngine.Random.Range(0.0f, 1.0f),
         };
+    }
+
+    public void PlayMmhmm()
+    {
+        if (Time.time > nextMmhmmSFX)
+        {
+            DougMmhmm.Play();
+            nextMmhmmSFX = Time.time + MmhmmSFXCooldown;
+        }
     }
 }

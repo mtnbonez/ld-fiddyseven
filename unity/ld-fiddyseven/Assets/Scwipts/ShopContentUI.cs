@@ -40,18 +40,26 @@ public class ShopContentUI : MonoBehaviour
         {
             GameObject newItem = Instantiate( itemPrefab, contentPanel );
 
-            newItem.transform.Find( "ItemName" ).GetComponent<TMP_Text>().text = buff.buffName;
-            newItem.transform.Find( "ItemPrice" ).GetComponent<TMP_Text>().text = $"{buff.buffCost}G";
+            ShopItem item = newItem.GetComponent<ShopItem>();
+
+            item.SetBuffType( buff.buffType );
+            item.SetItemName( buff.buffName );
+            item.SetItemPrice( buff.buffCost );
 
             Button buyButton = newItem.transform.Find( "BuyButton" ).GetComponent<Button>();
-            buyButton.onClick.AddListener( () => PurchaseItem( newItem ) );
+            buyButton.onClick.AddListener( () => PurchaseItem( newItem, buff ) );
         }
 
         LayoutRebuilder.ForceRebuildLayoutImmediate( contentPanel.GetComponent<RectTransform>() );
     }
 
-    void PurchaseItem( GameObject item )
+    void PurchaseItem( GameObject item, BuffData buffData )
     {
+        // TODO: Logic for buying buffs with currency
+
+        BuffManager buffManager = GameManager.Instance.GetBuffManager();
+        buffManager.AddBuff( buffData.buffType );
+
         Destroy( item );
     }
 }
