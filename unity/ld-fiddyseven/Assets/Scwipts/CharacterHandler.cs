@@ -52,6 +52,10 @@ public class CharacterHandler : MonoBehaviour
                     Destroy(rockBreakVFX, rockBreakdur);
                     blockBroken = true;
                 }
+                if(hit.collider.tag == "unbreakable" && hitDistance > maxDistance)
+                {
+                    PickAxeHit.Play();
+                }
             }
 
             Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
