@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -38,6 +39,7 @@ public class ShopTrigger : MonoBehaviour
     private void OnTriggerExit( Collider collision )
     {
         player = collision.GetComponentInParent<Player>();
+        Transform uiCanvas = FindFirstObjectByType<Canvas>().transform;
 
         if (player != null && player.CompareTag( "Player" ))
         {
@@ -45,6 +47,11 @@ public class ShopTrigger : MonoBehaviour
             player.SetCurrentShop( null );
             UpdatePlayerIsNearShop( player, false );
         }
+
+        if (uiCanvas != null)
+        {
+            uiCanvas.GetComponentInChildren<ShopUI>().CloseShop();
+        } 
     }
 
     private void UpdatePlayerIsNearShop( Player player, bool isNearShop )

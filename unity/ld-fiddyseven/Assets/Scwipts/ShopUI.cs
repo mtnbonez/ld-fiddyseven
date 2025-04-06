@@ -18,7 +18,7 @@ public class ShopUI : MonoBehaviour
         }
     }
 
-    private void CloseShop()
+    public void CloseShop()
     {
         SetIsShopOpen( false );
         Destroy( gameObject );
