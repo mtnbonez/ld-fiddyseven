@@ -54,7 +54,7 @@ public class CharacterHandler : MonoBehaviour
 
                    RockVision rockType = hit.collider.GetComponent<RockVision>();
 
-                    if(rockType.breakableType != checkUnbreakable)
+                    if(rockType.GetBreakableType() != BreakableType.Rock_Unbreakable)
                     {
                         Destroy(hit.collider.gameObject);
                         PlayAxeHitSFX();
@@ -64,12 +64,10 @@ public class CharacterHandler : MonoBehaviour
                         blockBroken = true;
 
                     }
-                    if(rockType.breakableType == checkUnbreakable)
+                    else if(rockType.GetBreakableType() == BreakableType.Rock_Unbreakable)
                     {
                         PlayAxeHitSFX();
                     }
-
-
                 }
             }
 
