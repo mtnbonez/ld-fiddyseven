@@ -5,10 +5,13 @@ public class CharacterHandler : MonoBehaviour
 {
     [SerializeField] private float cooldown = 1.25f;
     private float timeStamp;
+    private float nextMissSFX;
     private float raycastDistance = 26f;
     private float hitDistance = 3f;
     public bool IsGrounded = false;
     public AudioSource PickAxeHit;
+    public AudioSource PickAxeMiss;
+    public float PickAxeMissCooldown = 1.0f;
     public GameObject rockBreak;
     public float rockBreakdur = .1f;
     public bool TryBreakBlock()
@@ -49,6 +52,16 @@ public class CharacterHandler : MonoBehaviour
 
             Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
             timeStamp = Time.time + cooldown;
+        }
+
+        // DO: This logic should move to Player (pukes)
+        if (Time.time > nextMissSFX)
+        {
+            if (!blockBroken)
+            {
+                PickAxeMiss.Play();
+            }
+            nextMissSFX = Time.time + PickAxeMissCooldown;
         }
 
         return blockBroken;
