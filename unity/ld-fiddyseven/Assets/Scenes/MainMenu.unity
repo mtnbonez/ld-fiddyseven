@@ -541,6 +541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264333455796726468, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
+      propertyPath: checkUnbreakable
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2465389032902768441, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
       propertyPath: m_Enabled
       value: 0
