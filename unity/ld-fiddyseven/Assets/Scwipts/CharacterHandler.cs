@@ -50,9 +50,8 @@ public class CharacterHandler : MonoBehaviour
                     {
                         AddToBreakablesStats( vision.GetBreakableType(), 1 );
                     }
-                    
 
-                   RockVision rockType = hit.collider.GetComponent<RockVision>();
+                    RockVision rockType = hit.collider.GetComponent<RockVision>();
 
                     if(rockType.GetBreakableType() != BreakableType.Rock_Unbreakable)
                     {
@@ -115,22 +114,16 @@ public class CharacterHandler : MonoBehaviour
         {
             case BreakableType.Rock_Normal:
                 statsManager.AddNormalRocksBroken( amount );
-                Debug.Log( $"Normal Rocks Broken: {statsManager.playerStats.NormalRocksBroken}" );
                 break;
 
             case BreakableType.Rock_Hard:
-                Debug.Log( "Hard rock requires more hits!" );
-                break;
-
-            case BreakableType.Rock_Unbreakable:
-                Debug.Log( "This rock is unbreakable!" );
+                statsManager.AddHardRocksBroken( amount );
                 break;
 
             case BreakableType.Rock_Gold:
-                Debug.Log( "Gold rock broken! Extra rewards!" );
+                statsManager.AddGoldRocksBroken( amount );
                 break;
 
-            case BreakableType.undefined:
             default:
                 Debug.LogWarning( "Undefined breakable type." );
                 break;
