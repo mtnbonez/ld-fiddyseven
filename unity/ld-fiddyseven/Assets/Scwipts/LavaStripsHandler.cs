@@ -19,31 +19,24 @@ public class LavaStripsHandler : MonoBehaviour
 
             StartCoroutine(speedChangeDelay(1f));
         }
-            transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+        
+        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
     }
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collided");
+        //Debug.Log("collided");
         if (collision.collider.tag == "pickaxe" && hitRock == false)
         {
             hitRock = true;
-        }
-        if (hitRock)
-        {
-
             Destroy(collision.gameObject);
-            
         }
         if (collision.collider.tag == "Player")
         {
             Time.timeScale = 0;
             canvas.SetActive(true);
-
         }
-
-
-
     }
+
     IEnumerator speedChangeDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
