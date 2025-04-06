@@ -75,6 +75,9 @@ VisualEffect:
       - m_Value: {fileID: 2800000, guid: dedd2f6a18793f24087172df2ce09343, type: 3}
         m_Name: Texture Puff
         m_Overridden: 1
+      - m_Value: {fileID: 2800000, guid: f396a81038df94c45b587ce61c7ece3f, type: 3}
+        m_Name: Texture Dust
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!73398921 &2238468175921919622
