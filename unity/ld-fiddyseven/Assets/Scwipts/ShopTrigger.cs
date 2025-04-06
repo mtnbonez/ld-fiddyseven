@@ -9,31 +9,54 @@ public class ShopTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision )
     {
+        if (!collision.CompareTag( "playerCollider" ))
+        {
+            return;
+        }
+
         player = collision.GetComponentInParent<Player>();
 
         if (player != null && player.CompareTag( "Player" ))
         {
-            collision.transform.Find( "ShopPromptText" ).gameObject.SetActive(true);
-            player.SetCurrentShop( gameObject.transform.root.gameObject );
-            UpdatePlayerIsNearShop( player, true );
+            GameObject openShopText = collision.transform.Find( "ShopPromptText" ).gameObject;
+            if (openShopText != null)
+            {
+                openShopText.SetActive( true );
+                player.SetCurrentShop( gameObject.transform.root.gameObject );
+                UpdatePlayerIsNearShop( player, true );
+            }
+            
         }
     }
 
     private void OnTriggerExit( Collider collision )
     {
+        if (!collision.CompareTag( "playerCollider" ))
+        {
+            return;
+        }
+
         player = collision.GetComponentInParent<Player>();
         Transform uiCanvas = FindFirstObjectByType<Canvas>().transform;
 
         if (player != null && player.CompareTag( "Player" ))
         {
-            collision.transform.Find( "ShopPromptText" ).gameObject.SetActive( false );
-            player.SetCurrentShop( null );
-            UpdatePlayerIsNearShop( player, false );
+            GameObject openShopText = collision.transform.Find( "ShopPromptText" ).gameObject;
+            if (openShopText != null)
+            {
+                openShopText.SetActive( false );
+                player.SetCurrentShop( null );
+                UpdatePlayerIsNearShop( player, false );
+            }
         }
 
         if (uiCanvas != null)
         {
-            uiCanvas.GetComponentInChildren<ShopUI>().CloseShop();
+            ShopUI shopUI = uiCanvas.GetComponentInChildren<ShopUI>();
+            if (shopUI != null)
+            {
+                shopUI.CloseShop();
+            }
         } 
     }
 
