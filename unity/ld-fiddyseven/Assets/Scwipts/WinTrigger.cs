@@ -1,14 +1,17 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class WinTrigger : MonoBehaviour
 {
     public GameManager _gm;
 
-    private void OnCollisionEnter(Collision collision)
+
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Player")
-        {
-            _gm.SwitchScene_Shop();
-        }
+        _gm.SwitchScene_Shop();
     }
+
+
+ 
+
 }
+
