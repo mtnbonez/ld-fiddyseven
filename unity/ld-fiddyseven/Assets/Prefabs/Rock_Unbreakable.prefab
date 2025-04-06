@@ -12,10 +12,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Unbreakable
       objectReference: {fileID: 0}
-    - target: {fileID: 950295023961271012, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
-      propertyPath: m_TagString
-      value: unbreakable
-      objectReference: {fileID: 0}
     - target: {fileID: 2914233691503573429, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
