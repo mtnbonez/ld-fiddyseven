@@ -12,9 +12,7 @@ public class CharacterHandler : MonoBehaviour
 
     public AudioSource PickAxeHit;
     public AudioSource PickAxeMiss;
-    public AudioSource DougMmhmm;
-    public AudioSource DougJump;
-    
+
     public float PickAxeMissCooldown = 1.0f;
     public GameObject rockBreak;
     public float rockBreakdur = .1f;

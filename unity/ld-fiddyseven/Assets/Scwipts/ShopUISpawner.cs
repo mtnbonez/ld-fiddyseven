@@ -35,6 +35,7 @@ public class ShopUISpawner : MonoBehaviour
                 }
                 else
                 {
+                    player.PlayMmhmm();
                     OpenShop();
                 }
             }
