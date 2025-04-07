@@ -68,7 +68,7 @@ public class RockVision : MonoBehaviour
         // create new colors array where the colors will be created.
         Color[] colors = new Color[vertices.Length];
 
-        TargetColor.r = 1.0f;
+        TargetColor.r = 0.0f;
 
         for (int i = 0; i < vertices.Length; i++)
             colors[i] = TargetColor;
