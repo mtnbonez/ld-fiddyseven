@@ -1,91 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2699918580015739484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5726248445305637291}
-  - component: {fileID: 6576191020412225922}
-  - component: {fileID: 6956152690429881263}
-  m_Layer: 0
-  m_Name: Gizmo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5726248445305637291
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2699918580015739484}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.78, y: 3.99, z: 0.827}
-  m_LocalScale: {x: 2.016739, y: 2.016739, z: 2.016739}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6622540881177258775}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6576191020412225922
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2699918580015739484}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6956152690429881263
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2699918580015739484}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 373f1e9652bc1944ab8f592a755c32bd, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1833051450777410919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.23
+      value: 0.427
       objectReference: {fileID: 0}
     - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.33
+      value: 2.522
       objectReference: {fileID: 0}
     - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.815
+      value: 0.818
       objectReference: {fileID: 0}
     - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -149,10 +63,10 @@ PrefabInstance:
     - target: {fileID: 1998804810321557628, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: fa9d1814e97871d439212d43cfa5868b, type: 2}
+      objectReference: {fileID: 2100000, guid: 373f1e9652bc1944ab8f592a755c32bd, type: 2}
     - target: {fileID: 2271634494609647171, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_Name
-      value: Hot tub
+      value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_Name
@@ -165,10 +79,10 @@ PrefabInstance:
     - target: {fileID: 3515960725481034056, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6a561c989ca3f034292f4c1595bfe11c, type: 2}
+      objectReference: {fileID: 2100000, guid: a65bff1e115132844a787260fdc3629a, type: 2}
     - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.93
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -208,12 +122,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: ShopkeeperName
-      value: Buff Michael
+      value: Gizmo
       objectReference: {fileID: 0}
     - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: ShopkeeperSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6dd3f0875a1256641943f668f69a9b8c, type: 3}
+      objectReference: {fileID: 21300000, guid: 4f6cd844b79c5b549b385130084a2d30, type: 3}
     - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
       propertyPath: ShopkeeperMaterial
       value: 
@@ -224,14 +138,6 @@ PrefabInstance:
     - {fileID: 8280407140888046270, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
     - {fileID: 2560896198976760044, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
     - {fileID: 3224597615040718379, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 5726248445305637291}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
---- !u!4 &6622540881177258775 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
-  m_PrefabInstance: {fileID: 1833051450777410919}
-  m_PrefabAsset: {fileID: 0}
