@@ -3513,46 +3513,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shopkeeper_02
       objectReference: {fileID: 0}
-    - target: {fileID: 501651203673914148, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_Name
-      value: Hot tub
-      objectReference: {fileID: 0}
-    - target: {fileID: 1004129675053713692, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1004129675053713692, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.016739
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.016739
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.016739
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.78
-      objectReference: {fileID: 0}
     - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.99
+      value: 3.33
       objectReference: {fileID: 0}
     - target: {fileID: 1524362575681742565, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.827
+      value: 0.815
       objectReference: {fileID: 0}
-    - target: {fileID: 3007134838024014895, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+    - target: {fileID: 6617147514524836258, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
+      propertyPath: ShopkeeperName
+      value: Buff Michael
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617147514524836258, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
+      propertyPath: ShopkeeperSprite
       value: 
-      objectReference: {fileID: 2100000, guid: 6a561c989ca3f034292f4c1595bfe11c, type: 2}
+      objectReference: {fileID: 21300000, guid: 6dd3f0875a1256641943f668f69a9b8c, type: 3}
     - target: {fileID: 6622540881177258775, guid: 73039530bac21e3468aa0ec9dd300d87, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.93
