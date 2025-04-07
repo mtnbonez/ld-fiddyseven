@@ -61,7 +61,7 @@ public class CharacterHandler : MonoBehaviour
                     }
                     else if(vision.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
                     {
-                        PlayAxeHitSFX();
+                        //PlayAxeHitSFX();
                     }
                     if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
                     {
