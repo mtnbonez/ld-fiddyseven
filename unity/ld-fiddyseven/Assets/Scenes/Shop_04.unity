@@ -2728,58 +2728,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shopkeeper_04
       objectReference: {fileID: 0}
-    - target: {fileID: 1004129675053713692, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10.474762
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10.474762
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10.474762
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524362575681742565, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527812924041980427, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: buffs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527812924041980427, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: 'buffs.Array.data[1]'
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527812924041980427, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: 'buffs.Array.data[2]'
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617147514524836258, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: ShopkeeperName
-      value: Dora
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617147514524836258, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: ShopkeeperSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 623bf6d9ffa187a449db6e66e6a4cbfd, type: 3}
-    - target: {fileID: 6617147514524836258, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
-      propertyPath: ShopkeeperMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 767402e725744a0449ece8e013d49205, type: 2}
     - target: {fileID: 6622540881177258775, guid: d988f9634daafcb4da67ad72fdf249d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.98
