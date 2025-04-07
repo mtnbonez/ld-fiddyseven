@@ -57,6 +57,13 @@ public class Buff
                 new BuffData(BUFF_ID.SizeMinus20, BUFF_TYPE.Height, 0.8f)
             }
         )},
+        {BUFF_ID.SizePlus100, new BuffContent(
+            "TALL +100%",
+            5,
+            new List<BuffData>(){
+                new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
+            }
+        )},
         {BUFF_ID.Vision25, new BuffContent(
             "Vision +25%",
             10,
@@ -64,14 +71,22 @@ public class Buff
                 new BuffData(BUFF_ID.Vision25, BUFF_TYPE.VisionRange, 1.25f)
             } 
         )},
+        {BUFF_ID.Vision100, new BuffContent(
+            "Vision +100%",
+            10,
+            new List<BuffData>(){
+                new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f)
+            }
+        )},
 
         // DRAWBACK + BUFFS
         {BUFF_ID.TallWithAttackRange, new BuffContent(
             "Daddy Long Legs",
             0,
             new List<BuffData>(){
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Height, 2f),
+                new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f),
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f),
-                new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f)
             }
           )
         },
@@ -82,9 +97,7 @@ public class Buff
             40,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.05f),
-                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f),
-                new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
-            }
+                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f),            }
           )
         },
         {BUFF_ID.Gold10000, new BuffContent(
