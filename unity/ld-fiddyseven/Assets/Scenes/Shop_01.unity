@@ -1997,6 +1997,104 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097503085}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1144732812
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 589890691104833017, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_text
+      value: "    Ah, welcome stranger! Are ye thirstin\u2019 for power? Come knock
+        back the mightiest brews in the land!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589890691104833017, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_fontSize
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589890691104833017, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_margin.x
+      value: 6.6236863
+      objectReference: {fileID: 0}
+    - target: {fileID: 589890691104833017, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_margin.y
+      value: 0.31722236
+      objectReference: {fileID: 0}
+    - target: {fileID: 589890691104833017, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_margin.z
+      value: 6.5988803
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127523759350699212, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399351112227875537, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41c222f81709999479fc29b98cb8b0d3, type: 2}
+    - target: {fileID: 4500932076553837014, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Name
+      value: ShopIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847609853053498912, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507087883724658560, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Size.x
+      value: 10.880322
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507087883724658560, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Center.x
+      value: 2.5401626
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
 --- !u!1 &1179030397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,9 +3773,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 179184112517876710, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_text
+      value: "Last call, my friend! Ye don\u2019t have to go home but ye can\u2019t
+        stay here. Safe travels!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 179184112517876710, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_fontSize
+      value: 5.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 179184112517876710, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_margin.x
+      value: 6.578946
+      objectReference: {fileID: 0}
+    - target: {fileID: 179184112517876710, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_margin.y
+      value: 0.21192336
+      objectReference: {fileID: 0}
+    - target: {fileID: 179184112517876710, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_margin.z
+      value: 6.453452
+      objectReference: {fileID: 0}
+    - target: {fileID: 359701983972716805, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.04
+      objectReference: {fileID: 0}
     - target: {fileID: 472887801103706632, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: m_Name
       value: Shopkeeper_BartDrinkman
+      objectReference: {fileID: 0}
+    - target: {fileID: 613610288067595716, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: buffs.Array.size
@@ -3707,6 +3834,10 @@ PrefabInstance:
       propertyPath: 'buffs.Array.data[6]'
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3748606042372895099, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 41c222f81709999479fc29b98cb8b0d3, type: 2}
     - target: {fileID: 6622540881177258775, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -3987,6 +4118,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1179030398}
   - {fileID: 2095040172}
+  - {fileID: 1144732812}
   - {fileID: 1293730055}
   - {fileID: 316257346}
   - {fileID: 1897322852}
