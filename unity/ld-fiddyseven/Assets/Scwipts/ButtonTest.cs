@@ -1,5 +1,7 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 [ExecuteInEditMode]
 public class ButtonTest : MonoBehaviour
 {
@@ -26,3 +28,5 @@ public class ButtonTest : MonoBehaviour
         Debug.Log("Button2 Pressed");
     }
 }
+
+#endif

@@ -26,6 +26,7 @@ public class RockGrid : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     public void MakeRocksPrefab()
     {
         for (int y = 0; y < yGridSize; y++)
@@ -40,6 +41,7 @@ public class RockGrid : MonoBehaviour
             }
         }
     }
+#endif
 
 
 

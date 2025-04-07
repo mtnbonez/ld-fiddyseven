@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class ShopUISpawner : MonoBehaviour
 {
     public GameObject shopUIPrefab;
