@@ -7,14 +7,21 @@ public class ShopUI : MonoBehaviour
     public Button closeButton;
     public Image shopKeeperImage;
     public TextMeshProUGUI shopKeeperTMP;
+    private GameObject exitDialogBox;
 
     private bool isShopOpen = false;
 
     public void SetIsShopOpen(bool isOpen) { isShopOpen = isOpen; }
     public bool IsShopOpen() { return isShopOpen; }
 
+    public void Init(GameObject exitDialogBox, AudioSource audioSource)
+    {
+        this.exitDialogBox = exitDialogBox;
+    }
+
     public void CloseShop()
     {
+        exitDialogBox.SetActive(true);
         SetIsShopOpen( false );
         Destroy( gameObject );
     }
@@ -31,7 +38,6 @@ public class ShopUI : MonoBehaviour
 
     private void SetNameFromShopkeeper()
     {
-
         ShopUISpawner shopkeeper = GetShopUISpawner();
         if (shopkeeper != null)
         {

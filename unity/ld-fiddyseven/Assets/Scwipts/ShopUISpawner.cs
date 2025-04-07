@@ -3,6 +3,8 @@ using UnityEngine;
 public class ShopUISpawner : MonoBehaviour
 {
     public GameObject shopUIPrefab;
+    public GameObject exitDialogBox;
+    public AudioSource purchaseSFX;
 
     [SerializeField]
     private Sprite ShopkeeperSprite;
@@ -48,7 +50,14 @@ public class ShopUISpawner : MonoBehaviour
     {
         GameObject shopUI = Instantiate( shopUIPrefab, uiCanvas );
         shopUI.transform.SetParent( uiCanvas, false );
-        uiCanvas.GetComponentInChildren<ShopUI>().SetIsShopOpen( true );
+        ShopUI shopUiComponent = uiCanvas.GetComponentInChildren<ShopUI>();
+        shopUiComponent.Init(exitDialogBox, purchaseSFX);
+        shopUiComponent.SetIsShopOpen( true );
+        
+        if (exitDialogBox != null)
+        {
+            exitDialogBox.SetActive( false );
+        }
     }
 
     public Sprite GetShopkeeperSprite()
@@ -64,5 +73,10 @@ public class ShopUISpawner : MonoBehaviour
     public Material GetShopkeeperMaterial()
     {
         return ShopkeeperMaterial;
+    }
+
+    public void PlayPurchaseSFX()
+    {
+        purchaseSFX.Play();
     }
 }

@@ -7,9 +7,12 @@ public class ShopContentUI : MonoBehaviour
     public GameObject itemPrefab; // Assign in Inspector
     public Transform contentPanel; // Assign Scroll View Content Panel
     public Dictionary<Buff.BUFF_ID, BuffContent> shopInventory;
+    private ShopUISpawner shopUISpawner;
 
     private void Start()
     {
+        GameObject shopKeeper = GameObject.FindWithTag("Shopkeeper");
+        shopUISpawner = shopKeeper.GetComponent<ShopUISpawner>();
         PopulateShop();
     }
 
@@ -61,10 +64,11 @@ public class ShopContentUI : MonoBehaviour
         }
 
         BuffManager buffManager = GameManager.Instance.GetBuffManager();
-
         buffManager.AddBuffs(buffContent.buffs);
         shopInventory.Remove(buffId);
         GameManager.Instance.GetStatsManager().AddGoldSpent( buffContent.buffCost );
         Destroy( item );
+
+        shopUISpawner.PlayPurchaseSFX();
     }
 }
