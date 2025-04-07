@@ -136,10 +136,10 @@ public class Player : MonoBehaviour
                 isJumping = true;
                 _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + initialJumpForce, 0);
 
-                if (Time.time > nextJumpSFX)
+                if (Time.realtimeSinceStartup > nextJumpSFX)
                 {
                     DougJump.Play();
-                    nextJumpSFX = Time.time + JumpSFXCooldown;
+                    nextJumpSFX = Time.realtimeSinceStartup + JumpSFXCooldown;
                 }
             }
 
@@ -180,10 +180,10 @@ public class Player : MonoBehaviour
 
     public void PlayMmhmm()
     {
-        if (Time.time > nextMmhmmSFX)
+        if (Time.realtimeSinceStartup > nextMmhmmSFX)
         {
             DougMmhmm.Play();
-            nextMmhmmSFX = Time.time + MmhmmSFXCooldown;
+            nextMmhmmSFX = Time.realtimeSinceStartup + MmhmmSFXCooldown;
         }
     }
 }

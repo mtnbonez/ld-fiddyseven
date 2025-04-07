@@ -29,7 +29,7 @@ public class CharacterHandler : MonoBehaviour
     public bool TryBreakBlock()
     {
         bool blockBroken = false;
-        if (Time.time > timeStamp)
+        if (Time.realtimeSinceStartup > timeStamp)
         {
             bool blockWasDamage = false;
             Vector3 mousePosition = Input.mousePosition;
@@ -86,7 +86,7 @@ public class CharacterHandler : MonoBehaviour
             }
 
             //Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
-            timeStamp = Time.time + pickAxeCooldown;
+            timeStamp = Time.realtimeSinceStartup + pickAxeCooldown;
             if (blockWasDamage)
             {
                 timeStamp += damageBlockCooldown;
@@ -94,12 +94,12 @@ public class CharacterHandler : MonoBehaviour
         }
 
         // DO: This logic should move to Player (pukes)
-        if (Time.time > nextPickAxeMissSFX)
+        if (Time.realtimeSinceStartup > nextPickAxeMissSFX)
         {
             if (!blockBroken)
             {
                 PlayAxeMissSFX();
-                nextPickAxeMissSFX = Time.time + PickAxeMissCooldown;
+                nextPickAxeMissSFX = Time.realtimeSinceStartup + PickAxeMissCooldown;
             }
         }
 
@@ -114,7 +114,7 @@ public class CharacterHandler : MonoBehaviour
         if (Time.realtimeSinceStartup > nextDougSwingSFX)
         {
             DougSwing.Play();
-            nextDougSwingSFX = Time.time + DougSwingMissCooldown;
+            nextDougSwingSFX = Time.realtimeSinceStartup + DougSwingMissCooldown;
         }
         
     }
