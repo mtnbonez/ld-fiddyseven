@@ -6,13 +6,16 @@ public class Buff
     public enum BUFF_ID
     {
         All,
-        SpeedPlus100,
-        JumpPlus1000,
-        AttackRangePlus100,
+        SpeedPlus25,
+        JumpPlus25,
+        AttackRangePlus10,
         SizePlus100,
-        SizeMinus50,
+        SizeMinus20,
         Vision25,
+        Vision100,
         Gold10000,
+
+        TallWithAttackRange
     }
 
     public enum BUFF_TYPE
@@ -26,39 +29,32 @@ public class Buff
     }
 
     private static readonly Dictionary<BUFF_ID, BuffContent> BuffList = new Dictionary<BUFF_ID, BuffContent> {
-        {BUFF_ID.SpeedPlus100, new BuffContent(
-            "Speed +100%",
+        {BUFF_ID.SpeedPlus25, new BuffContent(
+            "Speed +25%",
             10,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus100, BUFF_TYPE.Speed,  2f)
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.25f)
             } 
         )},
-        {BUFF_ID.JumpPlus1000, new BuffContent(
-            "Jump +1000%",
+        {BUFF_ID.JumpPlus25, new BuffContent(
+            "Jump +25%",
             20,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.JumpPlus1000, BUFF_TYPE.Jump, 20f)
+                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f)
             } 
         )},
-        {BUFF_ID.AttackRangePlus100, new BuffContent(
-            "Attack Range +100%",
+        {BUFF_ID.AttackRangePlus10, new BuffContent(
+            "Attack Range +10%",
             30,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.AttackRangePlus100, BUFF_TYPE.AttackRange, 2f)
+                new BuffData(BUFF_ID.AttackRangePlus10, BUFF_TYPE.AttackRange, 1.1f)
             } 
         )},
-        {BUFF_ID.SizePlus100, new BuffContent(
-            "Tall +100%",
-            10,
-            new List<BuffData>(){
-                new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
-            }
-        )},
-        {BUFF_ID.SizeMinus50, new BuffContent(
-            "Shorty -50%",
+        {BUFF_ID.SizeMinus20, new BuffContent(
+            "Shorty -20%",
             5,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SizeMinus50, BUFF_TYPE.Height, 0.5f)
+                new BuffData(BUFF_ID.SizeMinus20, BUFF_TYPE.Height, 0.8f)
             }
         )},
         {BUFF_ID.Vision25, new BuffContent(
@@ -68,12 +64,25 @@ public class Buff
                 new BuffData(BUFF_ID.Vision25, BUFF_TYPE.VisionRange, 1.25f)
             } 
         )},
+
+        // DRAWBACK + BUFFS
+        {BUFF_ID.TallWithAttackRange, new BuffContent(
+            "Daddy Long Legs",
+            0,
+            new List<BuffData>(){
+                new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f),
+                new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f)
+            }
+          )
+        },
+
+        // DEBUG
         {BUFF_ID.All, new BuffContent(
             "All",
             100,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus100, BUFF_TYPE.Speed, 2f),
-                new BuffData(BUFF_ID.JumpPlus1000, BUFF_TYPE.Jump, 20f),
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.25f),
+                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f),
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
             }
           )
@@ -84,7 +93,7 @@ public class Buff
             new List<BuffData>(){
                 new BuffData(BUFF_ID.Gold10000, BUFF_TYPE.Gold, 10000f)
             }
-          ) 
+          )
         },
     };
     

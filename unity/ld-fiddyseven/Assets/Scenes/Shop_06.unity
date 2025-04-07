@@ -1387,14 +1387,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 2527812924041980427, guid: 0ff8a1a0826468c409d48ff0b32cd359, type: 3}
-      propertyPath: buffs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527812924041980427, guid: 0ff8a1a0826468c409d48ff0b32cd359, type: 3}
-      propertyPath: 'buffs.Array.data[1]'
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6617147514524836258, guid: 0ff8a1a0826468c409d48ff0b32cd359, type: 3}
       propertyPath: ShopkeeperName
       value: Captain KinderFolk
