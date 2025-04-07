@@ -84,7 +84,7 @@ public class Buff
             "Daddy Long Legs",
             0,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Height, 2f),
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Height, 1.05f),
                 new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f),
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f),
             }
