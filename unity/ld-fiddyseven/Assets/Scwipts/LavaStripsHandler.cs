@@ -24,6 +24,8 @@ public class LavaStripsHandler : MonoBehaviour
         }
         if (collision.collider.tag == "playerCollision")
         {
+            Player player = collision.collider.GetComponentInParent<Player>();
+            player.SetPlayerDead( true );
             Time.timeScale = 0;
             canvas.SetActive(true);
         }
