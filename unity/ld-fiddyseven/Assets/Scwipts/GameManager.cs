@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Buff;
 
 public class GameManager : MonoBehaviour 
 {
@@ -25,14 +26,50 @@ public class GameManager : MonoBehaviour
 
         buffManager = new BuffManager();
         statsManager = new StatsManager();
+        SceneManager.activeSceneChanged += OnActiveSceneChange;
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnActiveSceneChange(Scene previousScene, Scene newScene)
+    {
+        // If we return to the MainMenu scene, clear all buffs
+        if (newScene.buildIndex == 0)
+        {
+            buffManager.ClearAllBuffs();
+        }
+    }
+
     public BuffManager GetBuffManager()
     {
         return buffManager;
+    }
+
+    public float GetSpeedBuffMultiplier()
+    {
+        BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.Speed);
+
+        if (data == null)
+        {
+            // Default multiplier 1x (so nothing)
+            return 1f;
+        }
+
+        return data.buffMultiplier;
+    }
+
+    public float GetJumpBuffMultiplier()
+    {
+        BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.Jump);
+
+        if (data == null)
+        {
+            // Default multiplier 1x (so nothing)
+            return 1f;
+        }
+
+        return data.buffMultiplier;
     }
 
     public StatsManager GetStatsManager()
