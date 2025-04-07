@@ -14,6 +14,7 @@ public class StatsManager
     public void AddGoldEarned(int amount )
     {
         playerStats.GoldEarned += amount;
+        GameManager.Instance.BroadcastGoldEarned( amount );
     }
 
     public void AddGoldSpent( int amount )

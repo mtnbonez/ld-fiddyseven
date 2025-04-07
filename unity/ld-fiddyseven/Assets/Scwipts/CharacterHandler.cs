@@ -64,11 +64,6 @@ public class CharacterHandler : MonoBehaviour
                     if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
                     {
                         GameManager.Instance.GetStatsManager().AddGoldEarned(1);
-
-
-                        //Debug.Log("im at least in here");
-                        Debug.Log(GameManager.Instance.GetStatsManager().playerStats.GoldEarned);
-                        //accrue gold here in gameManager & stats
                     }
                 }
             }
