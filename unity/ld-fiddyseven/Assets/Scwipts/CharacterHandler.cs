@@ -1,5 +1,3 @@
-using System;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class CharacterHandler : MonoBehaviour

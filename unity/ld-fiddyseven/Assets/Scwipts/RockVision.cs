@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
-using static UnityEngine.Rendering.DebugUI;
 
 public enum BreakableType
 {
