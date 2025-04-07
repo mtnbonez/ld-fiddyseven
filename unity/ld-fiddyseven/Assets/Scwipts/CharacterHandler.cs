@@ -19,6 +19,7 @@ public class CharacterHandler : MonoBehaviour
     public float DougSwingMissCooldown = 1.0f;
 
     public GameObject rockBreak;
+    public GameObject rockBreakGold;
     public float rockBreakdur = .1f;
         
     public BreakableType checkUnbreakable;
@@ -55,15 +56,21 @@ public class CharacterHandler : MonoBehaviour
                             AddToBreakablesStats(vision.GetBreakableType(), 1);
                             Destroy(hit.collider.gameObject);
                             PlayAxeHitSFX();
-                            GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
-
-                            Destroy(rockBreakVFX, rockBreakdur);
-                            blockBroken = true;
+                            
 
                             if (vision.GetBreakableType() == BreakableType.Rock_Gold)
                             {
                                 GameManager.Instance.GetStatsManager().AddGoldEarned(1);
+                                GameObject rockBreakVFX = Instantiate(rockBreakGold, hit.transform.position, Quaternion.identity);
+                                Destroy(rockBreakVFX, rockBreakdur);
                             }
+                            else
+                            {
+                                GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
+                                Destroy(rockBreakVFX, rockBreakdur);
+                            }
+                                
+                            blockBroken = true;
                         }
                         else
                         {
