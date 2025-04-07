@@ -57,6 +57,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6411181756187378025, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
+      propertyPath: HealthValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411181756187378025, guid: 4ee411a432286844dbfe4687fce87e3b, type: 3}
       propertyPath: breakableType
       value: 2
       objectReference: {fileID: 0}

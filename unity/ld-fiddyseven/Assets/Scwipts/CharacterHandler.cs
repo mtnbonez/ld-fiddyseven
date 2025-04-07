@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CharacterHandler : MonoBehaviour
 {
-    [SerializeField] private float cooldown = 1.25f;
+    [SerializeField] private float pickAxeCooldown = 0.01f;
+    [SerializeField] private float damageBlockCooldown = 0.2f;
     private float timeStamp;
     private float nextPickAxeMissSFX;
     private float nextDougSwingSFX;
@@ -29,6 +30,7 @@ public class CharacterHandler : MonoBehaviour
         bool blockBroken = false;
         if (Time.time > timeStamp)
         {
+            bool blockWasDamage = false;
             Vector3 mousePosition = Input.mousePosition;
 
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -43,35 +45,45 @@ public class CharacterHandler : MonoBehaviour
                 //Debug.Log("ROCKS HERE" + hit.collider.tag);
                 if(hit.collider.gameObject.TryGetComponent(out RockVision vision))
                 {
-                    // TODO: try to color the other rocks here?
-                    if (vision != null)
-                    {
-                        AddToBreakablesStats( vision.GetBreakableType(), 1 );
-                    }
-
                     if(vision.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= HitDistanceWithMultipliter)
                     {
-                        Destroy(hit.collider.gameObject);
-                        PlayAxeHitSFX();
-                        GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
+                        // TODO: have this modified by an ability
+                        vision.HealthValue -= 1;
 
-                        Destroy(rockBreakVFX, rockBreakdur);
-                        blockBroken = true;
+                        if (vision.HealthValue <= 0)
+                        {
+                            AddToBreakablesStats(vision.GetBreakableType(), 1);
+                            Destroy(hit.collider.gameObject);
+                            PlayAxeHitSFX();
+                            GameObject rockBreakVFX = Instantiate(rockBreak, hit.transform.position, Quaternion.identity);
 
+                            Destroy(rockBreakVFX, rockBreakdur);
+                            blockBroken = true;
+
+                            if (vision.GetBreakableType() == BreakableType.Rock_Gold)
+                            {
+                                GameManager.Instance.GetStatsManager().AddGoldEarned(1);
+                            }
+                        }
+                        else
+                        {
+                            vision.PaintDamage();
+                            blockWasDamage = true;
+                        }
                     }
                     else if(vision.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= HitDistanceWithMultipliter)
                     {
                         //PlayAxeHitSFX();
                     }
-                    if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= HitDistanceWithMultipliter)
-                    {
-                        GameManager.Instance.GetStatsManager().AddGoldEarned(1);
-                    }
                 }
             }
 
             //Debug.DrawRay(ray.origin, ray.direction * 26, Color.red, 2f);
-            timeStamp = Time.time + cooldown;
+            timeStamp = Time.time + pickAxeCooldown;
+            if (blockWasDamage)
+            {
+                timeStamp += damageBlockCooldown;
+            }
         }
 
         // DO: This logic should move to Player (pukes)
