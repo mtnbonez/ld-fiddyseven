@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 786047888702398600}
   - component: {fileID: 9032598711304421227}
   - component: {fileID: 2235716933544212220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollisionBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 7840361751443764102}
   - component: {fileID: 2866980805930528267}
   - component: {fileID: 8932837490235825637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollisionBox (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
