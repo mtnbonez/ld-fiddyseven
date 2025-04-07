@@ -281,6 +281,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3288387755124810619, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f3f0c70cf5da43640a18f0523e74ff3e, type: 3}
+    - target: {fileID: 3288387755124810619, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f3f0c70cf5da43640a18f0523e74ff3e, type: 3}
     - target: {fileID: 3399351112227875537, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -288,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 4500932076553837014, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: m_Name
       value: ShopIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088257796437159669, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: HideAfterExit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6034,6 +6046,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 5.6
       objectReference: {fileID: 0}
+    - target: {fileID: 359701983972716805, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.62
+      objectReference: {fileID: 0}
     - target: {fileID: 472887801103706632, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
       propertyPath: m_Name
       value: Shopkeeper_07
@@ -6052,11 +6068,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527812924041980427, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
       propertyPath: buffs.Array.size
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527812924041980427, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: 'buffs.Array.data[0]'
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2527812924041980427, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
       propertyPath: 'buffs.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527812924041980427, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: 'buffs.Array.data[2]'
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527812924041980427, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: 'buffs.Array.data[3]'
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3748606042372895099, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -6066,6 +6094,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5437799977883469994, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f3196a182ea5319448da59a5d911854c, type: 3}
+    - target: {fileID: 5437799977883469994, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f3196a182ea5319448da59a5d911854c, type: 3}
     - target: {fileID: 6617147514524836258, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
       propertyPath: ShopkeeperName
       value: Noodle
@@ -6114,10 +6150,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6922829704431433230, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 26eb54b415385754ca2d99e5fbb0f161, type: 3}
+    - target: {fileID: 6922829704431433230, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 26eb54b415385754ca2d99e5fbb0f161, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 460261966928122013, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 03d4d523c2c64ea4fadc321d8fe1193b, type: 3}
 --- !u!1 &2107665820
 GameObject:

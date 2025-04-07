@@ -81,8 +81,8 @@ public class Buff
             "All",
             100,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 2f),
-                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 20f),
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.25f),
+                new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f),
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
             }
           )
