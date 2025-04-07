@@ -20,6 +20,7 @@ public class StatsManager
     public void AddGoldSpent( int amount )
     {
         playerStats.GoldSpent += amount;
+        GameManager.Instance.BroadcastGoldSpent( amount );
     }
 
     public void AddNormalRocksBroken( int amount )
