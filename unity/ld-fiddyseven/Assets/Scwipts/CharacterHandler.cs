@@ -50,9 +50,13 @@ public class CharacterHandler : MonoBehaviour
                     {
                         // TODO: have this modified by an ability
                         vision.HealthValue -= 1;
+                       
 
                         if (vision.HealthValue <= 0)
                         {
+                            //GameManager.Instance.GetStatsManager().AddNormalRocksBroken(1);
+
+
                             AddToBreakablesStats(vision.GetBreakableType(), 1);
                             Destroy(hit.collider.gameObject);
                             PlayAxeHitSFX();
