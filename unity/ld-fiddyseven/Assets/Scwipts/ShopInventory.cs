@@ -17,7 +17,10 @@ public class ShopInventory : MonoBehaviour
     {
         foreach (Buff.BUFF_ID buffID in buffs)
         {
-            BuffInventoryData.Add(buffID, Buff.GetBuffData(buffID) );
+            if (!BuffInventoryData.ContainsKey(buffID))
+            {
+                BuffInventoryData.Add(buffID, Buff.GetBuffData(buffID));
+            }
         }
     }
 
