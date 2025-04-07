@@ -21,7 +21,9 @@ public class CharacterHandler : MonoBehaviour
     public float rockBreakdur = .1f;
         
     public BreakableType checkUnbreakable;
-    
+
+    private float HitDistanceWithMultipliter => hitDistance * GameManager.Instance.GetAttackRangeBuffMultiplier();
+
     public bool TryBreakBlock()
     {
         bool blockBroken = false;
@@ -47,7 +49,7 @@ public class CharacterHandler : MonoBehaviour
                         AddToBreakablesStats( vision.GetBreakableType(), 1 );
                     }
 
-                    if(vision.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
+                    if(vision.GetBreakableType() != BreakableType.Rock_Unbreakable && maxDistance <= HitDistanceWithMultipliter)
                     {
                         Destroy(hit.collider.gameObject);
                         PlayAxeHitSFX();
@@ -57,11 +59,11 @@ public class CharacterHandler : MonoBehaviour
                         blockBroken = true;
 
                     }
-                    else if(vision.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= hitDistance)
+                    else if(vision.GetBreakableType() == BreakableType.Rock_Unbreakable && maxDistance <= HitDistanceWithMultipliter)
                     {
                         //PlayAxeHitSFX();
                     }
-                    if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= hitDistance)
+                    if(vision.GetBreakableType() == BreakableType.Rock_Gold && maxDistance <= HitDistanceWithMultipliter)
                     {
                         GameManager.Instance.GetStatsManager().AddGoldEarned(1);
                     }
@@ -78,9 +80,8 @@ public class CharacterHandler : MonoBehaviour
             if (!blockBroken)
             {
                 PlayAxeMissSFX();
-                
+                nextPickAxeMissSFX = Time.time + PickAxeMissCooldown;
             }
-            nextPickAxeMissSFX = Time.time + PickAxeMissCooldown;
         }
 
         return blockBroken;

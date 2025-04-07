@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
     public int LevelCompleted = 0;
     public int gold = 0;
 
+    public GameObject RockVisionCircle;
+    public Vector3 OriginalRockVisionCircleScale;
+
+    public CapsuleCollider Character_Collider;
+    public float Original_Character_Collider_Height;
+    public Transform Art_Transform;
+    public Vector3 Original_Art_Scale;
+
     private void Awake()
     {
         if (Instance != null)
@@ -31,6 +39,8 @@ public class GameManager : MonoBehaviour
         }
 
         buffManager = new BuffManager();
+        buffManager.OnBuffAdded += OnBuffAdded;
+
         statsManager = new StatsManager();
         SceneManager.activeSceneChanged += OnActiveSceneChange;
 
@@ -45,6 +55,78 @@ public class GameManager : MonoBehaviour
         {
             buffManager.ClearAllBuffs();
         }
+
+        // Make this a function grrr
+        if (RockVisionCircle != null && OriginalRockVisionCircleScale != null)
+        {
+            RockVisionCircle.transform.localScale = OriginalRockVisionCircleScale * GetVisionMultiplier();
+        }
+        else
+        {
+            Debug.LogWarning("RockVision scale variables not set!");
+        }
+
+        // Adjust art
+        if (Art_Transform != null && Original_Art_Scale != null)
+        {
+            Art_Transform.transform.localScale = new Vector3(Original_Art_Scale.x, Original_Art_Scale.y * GetHeightMultiplier(), Original_Art_Scale.z);
+        }
+        else
+        {
+            Debug.LogWarning("Character size variables not set!");
+        }
+
+        // Adjust collider
+        if (Character_Collider != null && Original_Character_Collider_Height != 0)
+        {
+            Character_Collider.height = Original_Character_Collider_Height * GetHeightMultiplier();
+        }
+        else
+        {
+            Debug.LogWarning("Collider size variables not set!");
+        }
+    }
+
+    public void OnBuffAdded(BUFF_TYPE buffType)
+    {
+        if (buffType == BUFF_TYPE.VisionRange)
+        {
+            if (RockVisionCircle != null && OriginalRockVisionCircleScale != null)
+            {
+                RockVisionCircle.transform.localScale = OriginalRockVisionCircleScale * GetVisionMultiplier();
+            }
+            else
+            {
+                Debug.LogWarning("RockVision scale variables not set!");
+            }
+        }
+        else if (buffType == BUFF_TYPE.Height)
+        {
+            // Adjust art
+            if (Art_Transform != null && Original_Art_Scale != null)
+            {
+                Art_Transform.transform.localScale = new Vector3(Original_Art_Scale.x, Original_Art_Scale.y * GetHeightMultiplier(), Original_Art_Scale.z);
+            }
+            else
+            {
+                Debug.LogWarning("Character size variables not set!");
+            }
+
+            // Adjust collider
+            if (Character_Collider != null && Original_Character_Collider_Height != 0)
+            {
+                Character_Collider.height = Original_Character_Collider_Height * GetHeightMultiplier();
+            }
+            else
+            {
+                Debug.LogWarning("Collider size variables not set!");
+            }
+        }
+        else if (buffType == BUFF_TYPE.Gold)
+        {
+            BroadcastGoldEarned(10000);
+        }
+        
     }
 
     public BuffManager GetBuffManager()
@@ -68,6 +150,45 @@ public class GameManager : MonoBehaviour
     public float GetJumpBuffMultiplier()
     {
         BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.Jump);
+
+        if (data == null)
+        {
+            // Default multiplier 1x (so nothing)
+            return 1f;
+        }
+
+        return data.buffMultiplier;
+    }
+
+    public float GetAttackRangeBuffMultiplier()
+    {
+        BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.AttackRange);
+
+        if (data == null)
+        {
+            // Default multiplier 1x (so nothing)
+            return 1f;
+        }
+
+        return data.buffMultiplier;
+    }
+
+    public float GetVisionMultiplier()
+    {
+        BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.VisionRange);
+
+        if (data == null)
+        {
+            // Default multiplier 1x (so nothing)
+            return 1f;
+        }
+
+        return data.buffMultiplier;
+    }
+
+    public float GetHeightMultiplier()
+    {
+        BuffData data = buffManager.GetActiveBuff(BUFF_TYPE.Height);
 
         if (data == null)
         {

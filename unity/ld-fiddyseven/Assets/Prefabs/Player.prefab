@@ -585,6 +585,7 @@ MonoBehaviour:
   DougSwingMissCooldown: 6
   rockBreak: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
   rockBreakdur: 3
+  checkUnbreakable: 0
 --- !u!136 &7470087320205914096
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -936,6 +937,8 @@ MonoBehaviour:
   MmhmmSFXCooldown: 1
   DougJump: {fileID: 234632850963026713}
   JumpSFXCooldown: 2
+  VisionCircle: {fileID: 4806602092064868881}
+  ArtTransform: {fileID: 6172171601796613525}
 --- !u!114 &3675029197893386469
 MonoBehaviour:
   m_ObjectHideFlags: 0

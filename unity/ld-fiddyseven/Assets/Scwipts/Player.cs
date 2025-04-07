@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
     private CharacterHandler _characterHandler;
+    private CapsuleCollider _capsuleCollider;
     [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
     private bool isSwinging = false;
@@ -22,6 +23,9 @@ public class Player : MonoBehaviour
     public AudioSource DougJump;
     public float JumpSFXCooldown = 1.0f;
     private float nextJumpSFX;
+
+    public GameObject VisionCircle;
+    public Transform ArtTransform;
 
     public bool IsJumping => isJumping || !_characterHandler.IsGrounded;
     public bool IsWalking => Input.GetAxisRaw("Horizontal") != 0;
@@ -39,6 +43,17 @@ public class Player : MonoBehaviour
         _camera = this.GetComponentInChildren<Camera>();
         _cameraBoxCollider = _camera.GetComponent<BoxCollider>();
         _characterHandler = this.GetComponentInChildren<CharacterHandler>();
+        _capsuleCollider = this.GetComponentInChildren<CapsuleCollider>();
+
+        GameManager.Instance.RockVisionCircle = VisionCircle;
+        GameManager.Instance.OriginalRockVisionCircleScale = VisionCircle.transform.localScale;
+
+        GameManager.Instance.Character_Collider = _capsuleCollider;
+        GameManager.Instance.Original_Character_Collider_Height = _capsuleCollider.height;
+
+        GameManager.Instance.Art_Transform = ArtTransform;
+        GameManager.Instance.Original_Art_Scale = ArtTransform.localScale;
+
     }
 
     // Update is called once per frame
