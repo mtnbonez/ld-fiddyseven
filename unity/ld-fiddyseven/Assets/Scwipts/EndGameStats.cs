@@ -8,22 +8,11 @@ public class EndGameStats : MonoBehaviour
     public GameObject GoldSpent;
     public GameObject RocksBusted;
 
-    void Update()
-    {
-        string goldEarned = statsManager.playerStats.GoldEarned.ToString();
-       // string GoldSpent = statsManager.playerStats.GoldSpent.ToString();
-       // string RocksBusted = statsManager.playerStats.NormalRocksBroken.ToString(); 
-
-        GoldCounter.GetComponent<TextMeshProUGUI>().text = goldEarned;
-       // GoldCounter.GetComponent<TextMeshProUGUI>().text = GoldSpent;
-       // GoldCounter.GetComponent<TextMeshProUGUI>().text = RocksBusted;
-    }
-
-    private void Update()
+    void OnEnable()
     {
         string goldEarned = statsManager.playerStats.GoldEarned.ToString();
         string GoldSpent = statsManager.playerStats.GoldSpent.ToString();
-        string RocksBusted = statsManager.playerStats.NormalRocksBroken.ToString();
+        string RocksBusted = statsManager.playerStats.NormalRocksBroken.ToString(); 
 
         GoldCounter.GetComponent<TextMeshProUGUI>().text = goldEarned;
         GoldCounter.GetComponent<TextMeshProUGUI>().text = GoldSpent;
