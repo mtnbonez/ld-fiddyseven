@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
+    // Gold earned event
+    public static event Action<int> OnGoldEarned;
+
     public static GameManager Instance;
 
     [SerializeField] AudioSource ambientSfx;
@@ -58,5 +62,11 @@ public class GameManager : MonoBehaviour
     public int GetNumOfScenes()
     {
         return SceneManager.sceneCountInBuildSettings;
+    }
+
+    public void BroadcastGoldEarned(int goldAmount)
+    {
+        gold += goldAmount;
+        OnGoldEarned?.Invoke( gold );
     }
 }
