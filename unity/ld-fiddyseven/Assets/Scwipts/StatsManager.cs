@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-
 public class StatsManager
 {
     // I'm better than this, but i'm tired. - Matt
