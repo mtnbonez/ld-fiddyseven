@@ -5,8 +5,9 @@ using static Buff;
 
 public class GameManager : MonoBehaviour 
 {
-    // Gold earned event
+    // Gold earned/spent events
     public static event Action<int> OnGoldEarned;
+    public static event Action<int> OnGoldSpent;
 
     public static GameManager Instance;
 
@@ -105,5 +106,11 @@ public class GameManager : MonoBehaviour
     {
         gold += goldAmount;
         OnGoldEarned?.Invoke( gold );
+    }
+
+    public void BroadcastGoldSpent( int goldAmount )
+    {
+        gold -= goldAmount;
+        OnGoldSpent?.Invoke( gold );
     }
 }

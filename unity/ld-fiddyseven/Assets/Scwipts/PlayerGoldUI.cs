@@ -24,11 +24,13 @@ public class PlayerGoldUI : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnGoldEarned += UpdateGoldUI;
+        GameManager.OnGoldSpent += UpdateGoldUI;
     }
 
     private void OnDisable()
     {
         GameManager.OnGoldEarned -= UpdateGoldUI;
+        GameManager.OnGoldSpent -= UpdateGoldUI;
     }
 
     void UpdateGoldUI(int newGoldAmount )
