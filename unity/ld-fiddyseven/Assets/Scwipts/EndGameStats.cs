@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class EndGameStats : MonoBehaviour
 {
-    StatsManager statsManager = GameManager.Instance.GetStatsManager();
+    StatsManager statsManager;
     public GameObject GoldCounter;
     public GameObject GoldSpent;
     public GameObject RocksBusted;
 
     void OnEnable()
     {
+        statsManager = GameManager.Instance.GetStatsManager();
+
         string goldEarned = statsManager.playerStats.GoldEarned.ToString();
         string GoldSpent = statsManager.playerStats.GoldSpent.ToString();
         string RocksBusted = statsManager.playerStats.NormalRocksBroken.ToString(); 

@@ -31,49 +31,49 @@ public class Buff
     private static readonly Dictionary<BUFF_ID, BuffContent> BuffList = new Dictionary<BUFF_ID, BuffContent> {
         {BUFF_ID.SpeedPlus25, new BuffContent(
             "Speed +5%",
-            10,
+            50,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.05f)
             } 
         )},
         {BUFF_ID.JumpPlus25, new BuffContent(
             "Jump +25%",
-            20,
+            30,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f)
             } 
         )},
         {BUFF_ID.AttackRangePlus10, new BuffContent(
             "Attack Range +10%",
-            30,
+            100,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.AttackRangePlus10, BUFF_TYPE.AttackRange, 1.1f)
             } 
         )},
         {BUFF_ID.SizeMinus20, new BuffContent(
             "Shorty -20%",
-            5,
+            30,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SizeMinus20, BUFF_TYPE.Height, 0.8f)
             }
         )},
         {BUFF_ID.SizePlus100, new BuffContent(
             "TALL +100%",
-            5,
+            100,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
             }
         )},
         {BUFF_ID.Vision25, new BuffContent(
-            "Vision +25%",
-            10,
+            "Vision +5%",
+            100,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.Vision25, BUFF_TYPE.VisionRange, 1.25f)
+                new BuffData(BUFF_ID.Vision25, BUFF_TYPE.VisionRange, 1.05f)
             } 
         )},
         {BUFF_ID.Vision100, new BuffContent(
             "Vision +100%",
-            10,
+            120,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f)
             }
@@ -82,7 +82,7 @@ public class Buff
         // DRAWBACK + BUFFS
         {BUFF_ID.TallWithAttackRange, new BuffContent(
             "Daddy Long Legs",
-            0,
+            100,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Height, 1.05f),
                 new BuffData(BUFF_ID.Vision100, BUFF_TYPE.VisionRange, 2f),

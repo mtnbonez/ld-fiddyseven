@@ -14,7 +14,7 @@ public class BuffManager
         {
             if (!activeBuffs.TryAdd(buff.buffType, buff))
             {
-                activeBuffs[buff.buffType].buffMultiplier += buff.buffMultiplier;
+                activeBuffs[buff.buffType].buffMultiplier *= buff.buffMultiplier;
             }
 
             OnBuffAdded.Invoke(buff.buffType);
