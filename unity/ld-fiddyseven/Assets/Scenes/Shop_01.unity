@@ -272,14 +272,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8542331600598340446, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: firstboot
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8927160124486552044, guid: 60856ab3f8130d849bb36216757b123f, type: 3}
-      propertyPath: uiCanvas
-      value: 
-      objectReference: {fileID: 62277012}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3689,7 +3681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: buffs.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: 'buffs.Array.data[1]'
@@ -3706,6 +3698,14 @@ PrefabInstance:
     - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: 'buffs.Array.data[4]'
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: 'buffs.Array.data[5]'
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527812924041980427, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
+      propertyPath: 'buffs.Array.data[6]'
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6622540881177258775, guid: 61aa892c229e6d248b4d8d981a41a12c, type: 3}
       propertyPath: m_LocalPosition.x

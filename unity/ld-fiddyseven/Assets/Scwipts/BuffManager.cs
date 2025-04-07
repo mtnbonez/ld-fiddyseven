@@ -1,15 +1,23 @@
+using System;
 using System.Collections.Generic;
 
 public class BuffManager
 {
-    //private List<Buff.BUFF_TYPE> activeBuffs = new List<Buff.BUFF_TYPE>();
+    // This dictionary condenses all stats into multipliers!
     private Dictionary<Buff.BUFF_TYPE, BuffData> activeBuffs = new Dictionary<Buff.BUFF_TYPE, BuffData>();
 
-    public void AddBuff( Buff.BUFF_TYPE buff, BuffData data )
+    public Action<Buff.BUFF_TYPE> OnBuffAdded;
+
+    public void AddBuffs(List<BuffData> data)
     {
-        if (!activeBuffs.TryAdd(buff, data))
+        foreach (BuffData buff in data)
         {
-            activeBuffs[buff].buffMultiplier += data.buffMultiplier;
+            if (!activeBuffs.TryAdd(buff.buffType, buff))
+            {
+                activeBuffs[buff.buffType].buffMultiplier += buff.buffMultiplier;
+            }
+
+            OnBuffAdded.Invoke(buff.buffType);
         }
     }
 

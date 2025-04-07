@@ -4,20 +4,20 @@ using UnityEngine;
 public class ShopInventory : MonoBehaviour
 {
     [SerializeField]
-    private List<Buff.BUFF_TYPE> buffs;
+    private List<Buff.BUFF_ID> buffs;
 
-    private Dictionary<Buff.BUFF_TYPE, BuffData> BuffInventoryData = new Dictionary<Buff.BUFF_TYPE, BuffData>();
+    private Dictionary<Buff.BUFF_ID, BuffContent> BuffInventoryData = new Dictionary<Buff.BUFF_ID, BuffContent>();
 
-    public Dictionary<Buff.BUFF_TYPE, BuffData> GetBuffInventoryData()
+    public Dictionary<Buff.BUFF_ID, BuffContent> GetBuffInventoryData()
     {
         return BuffInventoryData;
     }
 
     private void BuildInventoryData()
     {
-        foreach (Buff.BUFF_TYPE buffType in buffs)
+        foreach (Buff.BUFF_ID buffID in buffs)
         {
-            BuffInventoryData.Add( buffType, Buff.GetBuffData( buffType ) );
+            BuffInventoryData.Add(buffID, Buff.GetBuffData(buffID) );
         }
     }
 

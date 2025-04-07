@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ShopItem : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class ShopItem : MonoBehaviour
 
     private int buffPrice;
     private Color32 youreBroke = new Color32(130, 10, 10, 255);
+    public List<BuffData> buffList = new List<BuffData>();
 
-    Buff.BUFF_TYPE buffType;
+    private Color32 ogPriceColor;
 
     private void OnEnable()
     {
         GameManager.OnGoldAmountChanged += UpdateCostColor;
+        ogPriceColor = itemPrice.color;
     }
 
     private void OnDisable()
@@ -40,9 +43,9 @@ public class ShopItem : MonoBehaviour
         }
     }
 
-    public void SetBuffType(Buff.BUFF_TYPE buff )
+    public void SetBuffs(List<BuffData> buffs)
     {
-        buffType = buff;
+        buffList = buffs;
     }
 
     private void UpdateCostColor(int totalGold)
@@ -50,6 +53,10 @@ public class ShopItem : MonoBehaviour
         if (totalGold < buffPrice)
         {
             itemPrice.color = youreBroke;
+        }
+        else
+        {
+            itemPrice.color = ogPriceColor;
         }
     }
 }

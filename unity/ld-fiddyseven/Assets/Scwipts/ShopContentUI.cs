@@ -6,14 +6,14 @@ public class ShopContentUI : MonoBehaviour
 {
     public GameObject itemPrefab; // Assign in Inspector
     public Transform contentPanel; // Assign Scroll View Content Panel
-    public Dictionary<Buff.BUFF_TYPE, BuffData> shopInventory;
+    public Dictionary<Buff.BUFF_ID, BuffContent> shopInventory;
 
     private void Start()
     {
         PopulateShop();
     }
 
-    private Dictionary<Buff.BUFF_TYPE, BuffData> GetShopInventoryData()
+    private Dictionary<Buff.BUFF_ID, BuffContent> GetShopInventoryData()
     {
         GameObject shopKeeper = GameObject.FindWithTag( "Shopkeeper" );
         ShopInventory shopInventory = shopKeeper.GetComponentInChildren<ShopInventory>();
@@ -36,35 +36,35 @@ public class ShopContentUI : MonoBehaviour
             return;
         }
 
-        foreach (BuffData buff in shopInventory.Values)
+        foreach ((Buff.BUFF_ID buffId, BuffContent buffContent) in shopInventory)
         {
-            GameObject newItem = Instantiate( itemPrefab, contentPanel );
+            GameObject newItem = Instantiate(itemPrefab, contentPanel);
 
             ShopItem item = newItem.GetComponent<ShopItem>();
 
-            item.SetBuffType( buff.buffType );
-            item.SetItemName( buff.buffName );
-            item.SetItemPrice( buff.buffCost );
+            item.SetBuffs(buffContent.buffs);
+            item.SetItemName(buffContent.name);
+            item.SetItemPrice(buffContent.buffCost);
 
-            Button buyButton = newItem.transform.Find( "BuyButton" ).GetComponent<Button>();
-            buyButton.onClick.AddListener( () => PurchaseItem( newItem, buff ) );
+            Button buyButton = newItem.transform.Find("BuyButton").GetComponent<Button>();
+            buyButton.onClick.AddListener(() => PurchaseItem(newItem, buffId, buffContent));
         }
 
         LayoutRebuilder.ForceRebuildLayoutImmediate( contentPanel.GetComponent<RectTransform>() );
     }
 
-    void PurchaseItem( GameObject item, BuffData buffData )
+    void PurchaseItem( GameObject item, Buff.BUFF_ID buffId, BuffContent buffContent)
     {
-        if (GameManager.Instance.gold < buffData.buffCost)
+        if (GameManager.Instance.gold < buffContent.buffCost)
         {
             return;
         }
 
         BuffManager buffManager = GameManager.Instance.GetBuffManager();
-        buffManager.AddBuff( buffData.buffType, buffData);
-        shopInventory.Remove( buffData.buffType );
-        GameManager.Instance.GetStatsManager().AddGoldSpent( buffData.buffCost );
 
+        buffManager.AddBuffs(buffContent.buffs);
+        shopInventory.Remove(buffId);
+        GameManager.Instance.GetStatsManager().AddGoldSpent( buffContent.buffCost );
         Destroy( item );
     }
 }

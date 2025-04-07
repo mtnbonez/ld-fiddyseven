@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Camera _camera;
     private BoxCollider _cameraBoxCollider;
     private CharacterHandler _characterHandler;
+    private CapsuleCollider _capsuleCollider;
     [SerializeField] private bool jumpKeyHeld = false;
     [SerializeField] private bool isJumping = false;
     private bool isSwinging = false;
@@ -23,6 +24,9 @@ public class Player : MonoBehaviour
     public float JumpSFXCooldown = 1.0f;
     private float nextJumpSFX;
 
+    public GameObject VisionCircle;
+    public Transform ArtTransform;
+
     public bool IsJumping => isJumping || !_characterHandler.IsGrounded;
     public bool IsWalking => Input.GetAxisRaw("Horizontal") != 0;
     public bool IsFlipped => IsWalking && Input.GetAxisRaw("Horizontal") < 0;
@@ -32,26 +36,68 @@ public class Player : MonoBehaviour
     // player State for shop
     private GameObject currentShop;
     private bool isNearShop = false;
+    private bool blockPlayerInput = false;
+    private bool isDead = false;
+
+    private Camera introCamera;
 
     public void Awake()
     {
+        blockPlayerInput = true;
+        isDead = false;
+
         _rb = this.GetComponentInChildren<Rigidbody>();
         _camera = this.GetComponentInChildren<Camera>();
         _cameraBoxCollider = _camera.GetComponent<BoxCollider>();
         _characterHandler = this.GetComponentInChildren<CharacterHandler>();
+        _capsuleCollider = this.GetComponentInChildren<CapsuleCollider>();
+
+        GameManager.Instance.RockVisionCircle = VisionCircle;
+        GameManager.Instance.OriginalRockVisionCircleScale = VisionCircle.transform.localScale;
+
+        GameManager.Instance.Character_Collider = _capsuleCollider;
+        GameManager.Instance.Original_Character_Collider_Height = _capsuleCollider.height;
+
+        GameManager.Instance.Art_Transform = ArtTransform;
+        GameManager.Instance.Original_Art_Scale = ArtTransform.localScale;
+
+
+        // Hacky af right now dont look at me
+        GameObject logos = GameObject.Find( "Logos" );
+        if (logos != null)
+        {
+            introCamera = logos.GetComponentInChildren<Camera>();
+        }
     }
 
     // Update is called once per frame
     public void Update()
     {
+        UpdatePlayerInputEnabled();
         HandleInput();
         UpdateCameraPosition();
+    }
+
+    public void UpdatePlayerInputEnabled()
+    {
+        if (!isDead && (introCamera == null || !introCamera.enabled))
+        {
+            blockPlayerInput = false;
+        }
+        else if (isDead || introCamera.enabled)
+        {
+            blockPlayerInput = true;
+        }
     }
 
     public void SetCurrentShop( GameObject shop ){ currentShop = shop; }
     public GameObject GetCurrentShop() { return currentShop; }
     public void SetIsNearShop( bool nearShop ){ isNearShop = nearShop; }
     public bool IsNearShop(){ return isNearShop; }
+
+    public bool GetBlockPlayerInput() { return blockPlayerInput; }
+    public void BlockPlayerInput(bool shouldBlock ) { blockPlayerInput = shouldBlock; }
+    public void SetPlayerDead(bool dead ) { isDead = dead; }
 
     private void FixedUpdate()
     {
@@ -70,6 +116,11 @@ public class Player : MonoBehaviour
     
     private void HandleInput()
     {
+        if (blockPlayerInput)
+        {
+            return;
+        }
+
         float moveInput = Input.GetAxisRaw("Horizontal");
 
         Vector3 moveDirection = new Vector3(moveInput, 0, 0);
