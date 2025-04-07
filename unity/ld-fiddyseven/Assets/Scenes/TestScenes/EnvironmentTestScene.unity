@@ -93526,17 +93526,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2238468175921919622, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
       propertyPath: m_Name
       value: VFX_RockBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
