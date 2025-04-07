@@ -1367,6 +1367,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 179184112517876710, guid: 0ff8a1a0826468c409d48ff0b32cd359, type: 3}
+      propertyPath: m_fontSize
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 472887801103706632, guid: 0ff8a1a0826468c409d48ff0b32cd359, type: 3}
       propertyPath: m_Name
       value: Shopkeeper_06
@@ -5089,11 +5093,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.03
+      value: 11.59
       objectReference: {fileID: 0}
     - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2209104469186224547, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5130,6 +5134,18 @@ PrefabInstance:
     - target: {fileID: 4500932076553837014, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
       propertyPath: m_Name
       value: ShopIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088257796437159669, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: HideAfterExit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507087883724658560, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Size.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507087883724658560, guid: 59c5ada5caa62a245a1d9b8e87011dbc, type: 3}
+      propertyPath: m_Center.x
+      value: 7.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
