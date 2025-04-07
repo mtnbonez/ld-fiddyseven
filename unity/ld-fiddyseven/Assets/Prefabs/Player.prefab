@@ -576,7 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ae82161e5e4142b5d24c8e9129959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.01
+  pickAxeCooldown: 0.02
+  damageBlockCooldown: 0.2
   IsGrounded: 0
   PickAxeHit: {fileID: 6298207853160030618}
   PickAxeMiss: {fileID: 4541450611408507213}

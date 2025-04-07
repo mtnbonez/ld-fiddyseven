@@ -15,7 +15,7 @@ public class RockVision : MonoBehaviour
 
     [SerializeField] MeshFilter RockMesh;
 
-    [SerializeField] float meltValue = 0;
+    public float HealthValue = 1;
 
     public BreakableType breakableType;
 
@@ -58,6 +58,23 @@ public class RockVision : MonoBehaviour
             // assign the array of colors to the Mesh.
             RockMesh.mesh.colors = colors;
         }
+    }
+
+    public void PaintDamage()
+    {
+        //Debug.Log("Collided with vision");
+        Vector3[] vertices = RockMesh.mesh.vertices;
+
+        // create new colors array where the colors will be created.
+        Color[] colors = new Color[vertices.Length];
+
+        TargetColor.r = 1.0f;
+
+        for (int i = 0; i < vertices.Length; i++)
+            colors[i] = TargetColor;
+
+        // assign the array of colors to the Mesh.
+        RockMesh.mesh.colors = colors;
     }
 
     private void OnTriggerExit(Collider other)
