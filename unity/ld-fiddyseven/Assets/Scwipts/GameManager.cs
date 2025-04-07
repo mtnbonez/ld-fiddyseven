@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         if (newScene.buildIndex == 0)
         {
             buffManager.ClearAllBuffs();
-            gold = 0;
+            BroadcastGoldSpent(gold);
         }
 
         // Make this a function grrr
