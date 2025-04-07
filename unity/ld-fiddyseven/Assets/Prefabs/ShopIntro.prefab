@@ -27,9 +27,15 @@ Transform:
   m_GameObject: {fileID: 708826544006181590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 12.17, y: 6.085, z: 6.085}
   m_ConstrainProportionsScale: 1
+=======
+  m_LocalPosition: {x: 0.004, y: 1.37, z: 0}
+  m_LocalScale: {x: 1, y: 8.283907, z: 0.43260404}
+  m_ConstrainProportionsScale: 0
+>>>>>>> Stashed changes
   m_Children:
   - {fileID: 5512849300984901306}
   m_Father: {fileID: 2127523759350699212}
@@ -293,7 +299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 4847609853053498912}
+<<<<<<< Updated upstream
   HideAfterExit: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &4847609853053498912
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +328,11 @@ Transform:
   m_GameObject: {fileID: 4847609853053498912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 14.53, y: -31.8, z: 0}
+=======
+  m_LocalPosition: {x: 0.27, y: 7.63, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -450,7 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream
       value: -0.02
+=======
+      value: -0.68
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_LocalRotation.w
@@ -474,7 +491,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: -0.009
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5469770304990161274, guid: d5be22a19178bcb498f3666ef7328549, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
