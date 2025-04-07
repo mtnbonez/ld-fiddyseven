@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: a9032fccdf17d414bb602717aa8c5d2e, type: 2}
+  - {fileID: -7878114449787961915, guid: 66212f606135b814ab2310458428e4f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to Open Shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a9032fccdf17d414bb602717aa8c5d2e, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: a9032fccdf17d414bb602717aa8c5d2e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66212f606135b814ab2310458428e4f3, type: 2}
+  m_sharedMaterial: {fileID: -7878114449787961915, guid: 66212f606135b814ab2310458428e4f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
