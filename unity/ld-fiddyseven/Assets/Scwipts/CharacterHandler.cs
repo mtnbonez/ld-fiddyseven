@@ -54,10 +54,10 @@ public class CharacterHandler : MonoBehaviour
 
                         if (vision.HealthValue <= 0)
                         {
-                            //GameManager.Instance.GetStatsManager().AddNormalRocksBroken(1);
+                            GameManager.Instance.GetStatsManager().AddNormalRocksBroken(1);
 
 
-                            AddToBreakablesStats(vision.GetBreakableType(), 1);
+                            //AddToBreakablesStats(vision.GetBreakableType(), 1);
                             Destroy(hit.collider.gameObject);
                             PlayAxeHitSFX();
                             
