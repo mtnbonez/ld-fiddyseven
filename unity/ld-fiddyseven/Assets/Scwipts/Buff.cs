@@ -28,42 +28,42 @@ public class Buff
     private static readonly Dictionary<BUFF_ID, BuffContent> BuffList = new Dictionary<BUFF_ID, BuffContent> {
         {BUFF_ID.SpeedPlus100, new BuffContent(
             "Speed +100%",
-            100,
+            10,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SpeedPlus100, BUFF_TYPE.Speed,  2f)
             } 
         )},
         {BUFF_ID.JumpPlus1000, new BuffContent(
             "Jump +1000%",
-            200,
+            20,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.JumpPlus1000, BUFF_TYPE.Jump, 20f)
             } 
         )},
         {BUFF_ID.AttackRangePlus100, new BuffContent(
             "Attack Range +100%",
-            300,
+            30,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.AttackRangePlus100, BUFF_TYPE.AttackRange, 2f)
             } 
         )},
         {BUFF_ID.SizePlus100, new BuffContent(
             "Tall +100%",
-            400,
+            10,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
             }
         )},
         {BUFF_ID.SizeMinus50, new BuffContent(
             "Shorty -50%",
-            500,
+            5,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.SizeMinus50, BUFF_TYPE.Height, 0.5f)
             }
         )},
         {BUFF_ID.Vision25, new BuffContent(
             "Vision +25%",
-            100,
+            10,
             new List<BuffData>(){
                 new BuffData(BUFF_ID.Vision25, BUFF_TYPE.VisionRange, 1.25f)
             } 
