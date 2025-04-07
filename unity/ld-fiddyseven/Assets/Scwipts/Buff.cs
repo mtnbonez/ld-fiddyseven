@@ -30,10 +30,10 @@ public class Buff
 
     private static readonly Dictionary<BUFF_ID, BuffContent> BuffList = new Dictionary<BUFF_ID, BuffContent> {
         {BUFF_ID.SpeedPlus25, new BuffContent(
-            "Speed +25%",
+            "Speed +5%",
             10,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.25f)
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.05f)
             } 
         )},
         {BUFF_ID.JumpPlus25, new BuffContent(
@@ -79,9 +79,9 @@ public class Buff
         // DEBUG
         {BUFF_ID.All, new BuffContent(
             "All",
-            100,
+            40,
             new List<BuffData>(){
-                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.25f),
+                new BuffData(BUFF_ID.SpeedPlus25, BUFF_TYPE.Speed, 1.05f),
                 new BuffData(BUFF_ID.JumpPlus25, BUFF_TYPE.Jump, 1.25f),
                 new BuffData(BUFF_ID.SizePlus100, BUFF_TYPE.Height, 2f)
             }
