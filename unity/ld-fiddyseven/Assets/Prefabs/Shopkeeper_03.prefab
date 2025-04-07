@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1833051450777410919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.7112985
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7112985
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.7112985
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 889409500798450562, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.795
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485954830707676283, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998804810321557628, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 91fa9bd51ba15054099f454247e852d6, type: 2}
+    - target: {fileID: 2271634494609647171, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_Name
+      value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_Name
+      value: Shopkeeper_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296913214832441199, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_TagString
+      value: Shopkeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515960725481034056, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a653699cdff588d439ec88e067c327ab, type: 2}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -37.532
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798501027786045040, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: ShopkeeperName
+      value: Garblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: ShopkeeperSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca242798eb8300c4c95a1a35a4330958, type: 3}
+    - target: {fileID: 4802132495506521285, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+      propertyPath: ShopkeeperMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 767402e725744a0449ece8e013d49205, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8869495120440003980, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+    - {fileID: 8280407140888046270, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+    - {fileID: 2560896198976760044, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+    - {fileID: 3224597615040718379, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c987877cd5bba344eb8cb26dc413b52a, type: 3}

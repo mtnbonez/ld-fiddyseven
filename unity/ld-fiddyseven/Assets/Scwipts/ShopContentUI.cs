@@ -59,6 +59,8 @@ public class ShopContentUI : MonoBehaviour
         buffManager.AddBuff( buffData.buffType, buffData);
         shopInventory.Remove( buffData.buffType );
 
+        GameManager.Instance.BroadcastGoldSpent( buffData.buffCost );
+
         Destroy( item );
     }
 }
