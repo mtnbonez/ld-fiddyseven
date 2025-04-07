@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // Gold earned/spent events
     public static event Action<int> OnGoldEarned;
     public static event Action<int> OnGoldSpent;
+    public static event Action<int> OnGoldAmountChanged;
 
     public static GameManager Instance;
 
@@ -106,11 +107,18 @@ public class GameManager : MonoBehaviour
     {
         gold += goldAmount;
         OnGoldEarned?.Invoke( gold );
+        BroadcastGoldChanged(); // I know... I know
     }
 
     public void BroadcastGoldSpent( int goldAmount )
     {
         gold -= goldAmount;
         OnGoldSpent?.Invoke( gold );
+        BroadcastGoldChanged(); // I know... I know
+    }
+
+    public void BroadcastGoldChanged()
+    {
+        OnGoldAmountChanged?.Invoke( gold );
     }
 }

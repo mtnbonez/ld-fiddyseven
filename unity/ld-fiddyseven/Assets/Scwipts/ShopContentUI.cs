@@ -55,11 +55,15 @@ public class ShopContentUI : MonoBehaviour
 
     void PurchaseItem( GameObject item, BuffData buffData )
     {
+        if (GameManager.Instance.gold < buffData.buffCost)
+        {
+            return;
+        }
+
         BuffManager buffManager = GameManager.Instance.GetBuffManager();
         buffManager.AddBuff( buffData.buffType, buffData);
         shopInventory.Remove( buffData.buffType );
-
-        GameManager.Instance.BroadcastGoldSpent( buffData.buffCost );
+        GameManager.Instance.GetStatsManager().AddGoldSpent( buffData.buffCost );
 
         Destroy( item );
     }
