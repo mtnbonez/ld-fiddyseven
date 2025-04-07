@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + JumpMultiplier, 0);
+                _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y + (JumpMultiplier * GameManager.Instance.GetJumpBuffMultiplier()), 0);
             }
         }
     }
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
 
         Vector3 moveDirection = new Vector3(moveInput, 0, 0);
 
-        transform.position += moveDirection * MovementSensitivity * Time.deltaTime;
+        transform.position += moveDirection * MovementSensitivity * GameManager.Instance.GetSpeedBuffMultiplier() * Time.deltaTime;
 
         // Jump can ONLY be peformed if grounded
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("w"))

@@ -55,10 +55,8 @@ public class ShopContentUI : MonoBehaviour
 
     void PurchaseItem( GameObject item, BuffData buffData )
     {
-        // TODO: Logic for buying buffs with currency
-
         BuffManager buffManager = GameManager.Instance.GetBuffManager();
-        buffManager.AddBuff( buffData.buffType );
+        buffManager.AddBuff( buffData.buffType, buffData);
         shopInventory.Remove( buffData.buffType );
 
         Destroy( item );
