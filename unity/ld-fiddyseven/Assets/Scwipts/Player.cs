@@ -1,7 +1,4 @@
 using UnityEngine;
-using Unity.Mathematics;
-using UnityEngine.Experimental.GlobalIllumination;
-using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {

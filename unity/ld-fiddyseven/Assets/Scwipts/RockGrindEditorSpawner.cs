@@ -1,5 +1,7 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 [ExecuteInEditMode]
 public class RockGrindEditorSpawner : MonoBehaviour
 {
@@ -30,3 +32,5 @@ public class RockGrindEditorSpawner : MonoBehaviour
     }
 
 }
+
+#endif

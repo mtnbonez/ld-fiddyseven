@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using System.Collections.Generic;
 
 public class ShopContentUI : MonoBehaviour
 {
     public GameObject itemPrefab; // Assign in Inspector
     public Transform contentPanel; // Assign Scroll View Content Panel
+    public Dictionary<Buff.BUFF_TYPE, BuffData> shopInventory;
 
     private void Start()
     {
@@ -28,7 +28,7 @@ public class ShopContentUI : MonoBehaviour
 
     void PopulateShop()
     {
-        Dictionary<Buff.BUFF_TYPE, BuffData> shopInventory = GetShopInventoryData();
+        shopInventory = GetShopInventoryData();
 
         if (shopInventory == null)
         {
@@ -59,6 +59,7 @@ public class ShopContentUI : MonoBehaviour
 
         BuffManager buffManager = GameManager.Instance.GetBuffManager();
         buffManager.AddBuff( buffData.buffType );
+        shopInventory.Remove( buffData.buffType );
 
         Destroy( item );
     }

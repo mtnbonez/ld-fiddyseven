@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class LavaStripsHandler : MonoBehaviour
 {
     public float fallSpeed = 2.0f;
