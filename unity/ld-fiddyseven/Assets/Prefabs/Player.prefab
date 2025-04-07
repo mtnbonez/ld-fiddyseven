@@ -585,8 +585,9 @@ MonoBehaviour:
   DougSwing: {fileID: 5853568102938216533}
   DougSwingMissCooldown: 6
   rockBreak: {fileID: 7913982529412637304, guid: ec80a2d64b65db341aeff11ebab1bfe5, type: 3}
+  rockBreakGold: {fileID: 7913982529412637304, guid: f530d09fbf6202743810a577ce51bf6f, type: 3}
   rockBreakdur: 3
-  checkUnbreakable: 0
+  checkUnbreakable: 3
 --- !u!136 &7470087320205914096
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -955,6 +956,7 @@ MonoBehaviour:
   firstboot: 0
   CameraDelay: 0
   PlayerCamera: {fileID: 2465389032902768441}
+  PlayerUICanvas: {fileID: 0}
 --- !u!1 &7558463481425793834
 GameObject:
   m_ObjectHideFlags: 0

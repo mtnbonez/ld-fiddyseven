@@ -3,6 +3,7 @@ using UnityEngine;
 public class ShopIntroHandler : MonoBehaviour
 {
     public GameObject dialogBox;
+    public bool HideAfterExit = false;
 
     private bool hasTriggered = false;
 
@@ -10,10 +11,6 @@ public class ShopIntroHandler : MonoBehaviour
     {
         if (collider.tag == "playerCollision" && !hasTriggered)
         {
-            Debug.Log("Test");
-            // Enable dialog box
-            // TODO: add dialog box as well
-
             if (dialogBox != null)
             {
                 dialogBox.SetActive(true);
@@ -25,13 +22,14 @@ public class ShopIntroHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "playerCollision" && hasTriggered)
+        if (HideAfterExit)
         {
-            Debug.Log("Test2");
-
-            if (dialogBox != null)
+            if (other.tag == "playerCollision" && hasTriggered)
             {
-                dialogBox.SetActive(false);
+                if (dialogBox != null)
+                {
+                    dialogBox.SetActive(false);
+                }
             }
         }
     }
