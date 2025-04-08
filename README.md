@@ -1,4 +1,4 @@
-### (If the game doesn't load, try our [mirror on itch.io here](https://mtnbonez.itch.io/dug-doug-under-da-ground)) 
+# Try our game and [let us know what you think on LDJam!](https://ldjam.com/events/ludum-dare/57/d-u-g-doug-under-da-ground/) 
 
 
 ![DUG_Shot1.jpg](media/DUG_Shot1.jpg)
