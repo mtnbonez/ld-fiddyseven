@@ -3,7 +3,7 @@
 
 ![DUG_Shot1.jpg](media/DUG_Shot1.jpg)
 
-# D.U.G.: Doug Underda Ground 
+# D.U.G.: Doug Under da Ground 
 ## [(Ludum Dare 57)](https://ldjam.com/events/ludum-dare/57/d-u-g-doug-under-da-ground/) 
 
 
